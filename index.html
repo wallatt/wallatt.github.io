@@ -15,2029 +15,1750 @@
     />
   </head>
   <body class="light-bg">
-    <form id="mainForm" class="main-form" action="/">
-      <section class="page-wrap">
-        <main id="app" role="main">
-          <section class="page-wrapper">
-            <div>
-              <section>
-                <div>
-                  <div id="resumeDoc">
+    <div>
+      <style type="text/css" id="static">
+        /*Font support for MAC*/
+        @font-face {
+          font-family: "Century Gothic";
+          font-weight: normal;
+          font-style: normal;
+          src: local("Century Gothic"),
+            url("/blobcontent/zty/fonts/CenturyGothic.ttf") format("truetype");
+        }
+        @font-face {
+          font-family: "Century Gothic";
+          font-weight: bold;
+          font-style: normal;
+          src: local("Century Gothic Bold"),
+            url("/blobcontent/zty/fonts/CenturyGothicBold.ttf")
+              format("truetype");
+        }
+        @font-face {
+          font-family: "Century Gothic";
+          font-weight: bold;
+          font-style: italic;
+          src: local("Century Gothic Bold Italic"),
+            url("/blobcontent/zty/fonts/CenturyGothicBoldItalic.ttf")
+              format("truetype");
+        }
+        @font-face {
+          font-family: "Century Gothic";
+          font-weight: normal;
+          font-style: italic;
+          src: local("Century Gothic Italic"),
+            url("/blobcontent/zty/fonts/CenturyGothicItalic.ttf")
+              format("truetype");
+        }
+
+        html,
+        body,
+        div,
+        span,
+        applet,
+        object,
+        iframe,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p,
+        blockquote,
+        pre,
+        a,
+        abbr,
+        acronym,
+        address,
+        big,
+        cite,
+        code,
+        del,
+        dfn,
+        em,
+        font,
+        img,
+        ins,
+        kbd,
+        q,
+        s,
+        samp,
+        small,
+        strike,
+        strong,
+        sub,
+        sup,
+        tt,
+        var,
+        b,
+        u,
+        i,
+        center,
+        dl,
+        dt,
+        dd,
+        ol,
+        ul,
+        li,
+        fieldset,
+        form,
+        label,
+        legend,
+        table,
+        caption,
+        tbody,
+        tfoot,
+        thead,
+        tr,
+        th,
+        td {
+          margin: 0;
+          padding: 0;
+          border: 0;
+          outline: 0;
+          vertical-align: baseline;
+          background: transparent;
+        }
+        body {
+          text-align: left;
+          font-feature-settings: "liga" 0;
+          -moz-font-feature-settings: "liga" off;
+        }
+        .skn-srz4 ol,
+        .skn-srz4 ul {
+          list-style: none;
+        }
+        .skn-srz4 table {
+          border-collapse: collapse;
+          border-spacing: 0;
+          font-size: inherit;
+          color: inherit;
+          width: 100%;
+        }
+
+        /*START content disc style for LI*/
+        .skn-srz4 ul,
+        .skn-srz4 li {
+          margin: 0;
+          padding: 0;
+          list-style-type: disc;
+        }
+        .skn-srz4 ul li {
+          margin: 0 0 0 16px;
+          padding: 0;
+        }
+        @-moz-document url-prefix() {
+          .skn-srz4 ul li {
+            margin: 0 0 0 12px;
+            padding: 0 0 0 3px;
+          }
+        }
+        /*END content disc style for LI*/
+
+        /*table style*/
+        .skn-srz4 table.skills,
+        .skn-srz4 .table_wrapper {
+          width: 100%;
+          margin-top: 0;
+          word-wrap: break-word;
+        }
+        .skn-srz4 table.skills th,
+        .skn-srz4 table.skills td {
+          width: 20%;
+          text-align: center;
+        }
+        .skn-srz4 table.skills .skillname,
+        .skn-srz4 table.skills .skillrating {
+          text-align: left;
+          width: 35%;
+        }
+        .skn-srz4 table.skills .skillrating {
+          width: 20%;
+        }
+        .skn-srz4 table.skills .skillyears,
+        .skn-srz4 table.skills .skilllast {
+          width: 19%;
+        }
+        .skn-srz4 table.skills .pad1 {
+          width: 5%;
+        }
+        .skn-srz4 .skills .pad2,
+        .skn-srz4 table.skills .pad3 {
+          width: 1%;
+        }
+
+        /* document */
+        .skn-srz4 {
+          box-sizing: border-box;
+          color: #343434;
+          font-variant-ligatures: none;
+          line-height: 16px;
+          min-height: 792px;
+          word-wrap: break-word;
+        }
+        .skn-srz4 .name {
+          color: #fff;
+          font-weight: 700;
+          position: relative;
+          text-align: left;
+          word-wrap: break-word;
+        }
+        .skn-srz4 .address .singlecolumn {
+          margin-left: 0 !important;
+        }
+        .skn-srz4 .heading {
+          border-bottom: 1px solid #d5d6d6;
+          font-weight: 700;
+          letter-spacing: 0;
+          line-height: 15px;
+          margin-bottom: 10px;
+          padding: 0 0 3px;
+        }
+        .skn-srz4 .sectiontitle {
+          color: #252932;
+          word-wrap: break-word;
+        }
+        .skn-srz4 .degreeGap {
+          margin-bottom: 4px;
+        }
+        .skn-srz4 .locationGap {
+          margin-top: 4px;
+        }
+        .skn-srz4 .firstparagraph {
+          margin-top: 0 !important;
+        }
+        .skn-srz4 .topsection {
+          background: #373d48;
+          padding: 15px 15px 20px;
+        }
+        .skn-srz4 .section:empty,
+        .skn-srz4 .hide-bar .ratingWrapper .noLnht,
+        .skn-srz4 .hide-bar .field-ratt {
+          display: none;
+        }
+        .skn-srz4 .education .joblocation {
+          font-style: italic;
+        }
+        .skn-srz4 .parentContainer {
+          border-collapse: collapse;
+          display: table;
+          min-height: inherit;
+          padding-bottom: 20px;
+          table-layout: fixed;
+          width: 100%;
+        }
+        .skn-srz4 .resumeTitle {
+          color: #fff;
+          padding-top: 7px;
+        }
+
+        /*left and right css*/
+        .skn-srz4 .right-box,
+        .skn-srz4 .left-box {
+          padding: 15px;
+        }
+        .skn-srz4 .right-box {
+          background-color: #f4f4f4;
+          box-sizing: content-box;
+          display: table-cell;
+          letter-spacing: 0.2px;
+          vertical-align: top;
+        }
+        .skn-srz4 .left-box .paddedline.date-content {
+          position: absolute;
+          font-weight: 700;
+          margin-left: 0;
+          width: 65px;
+        }
+        .skn-srz4 .paragraph .singlecolumn {
+          position: relative;
+        }
+        .skn-srz4 .left-box .summary .paragraph .singlecolumn {
+          margin-left: 0 !important;
+        }
+        .skn-srz4 .left-box {
+          display: table-cell;
+          letter-spacing: 0.2px;
+          vertical-align: top;
+        }
+        .skn-srz4 .firstsection,
+        .skn-srz4 .left-box .section:first-child,
+        .skn-srz4 .right-box .section:first-child {
+          padding-top: 0 !important;
+        }
+
+        /*common css*/
+        .skn-srz4 .txtBold {
+          font-weight: bold;
+        }
+        .skn-srz4 .txtItl {
+          font-style: italic;
+        }
+        .skn-srz4 .paddedline {
+          display: block;
+        }
+        .skn-srz4 .mt5 {
+          margin-top: 5px;
+        }
+        .skn-srz4 .word-break {
+          word-wrap: break-word;
+        }
+        .skn-srz4 .ratingWrapper {
+          text-align: right;
+          position: relative;
+        }
+        .skn-srz4 .ratingWrapper .noLnht {
+          line-height: 0;
+        }
+        .skn-srz4 svg {
+          height: 13px;
+        }
+
+        .skn-srz4 > div:not(.topsection) {
+          min-height: inherit;
+        }
+        /* Issues fix for builder page */
+        .skn-srz4 .ratingWrapper .default-fill {
+          fill: #373d48;
+        }
+
+        /* Only for firefox */
+        @-moz-document url-prefix() {
+          .skn-srz4 .parentContainer {
+            height: 1px;
+          }
+        }
+
+        /* For dates fix */
+        .skn-srz4 .left-box .hidedates {
+          visibility: hidden;
+          position: static !important;
+          display: block;
+          float: left;
+        }
+        .skn-srz4 .right-box .hidedates {
+          display: none;
+        }
+        .skn-srz4 .paragraph.datespara:after {
+          content: "";
+          display: table;
+          clear: both;
+        }
+
+        /*PICT*/
+        .skn-srz4 .prflPic,
+        .skn-srz4 .prflPic > div {
+          width: 154px;
+          height: 154px;
+        }
+        .skn-srz4 .prflPic img {
+          min-width: 100%;
+          max-width: 100%;
+          min-height: 100%;
+          max-height: 100%;
+        }</style
+      ><style
+        type="text/css"
+        id="dynamic"
+        data-time="Fri Oct 14 2022 00:29:21 GMT-0300 (hora estándar de Argentina)"
+      >
+        .skn-srz4,
+        .skn-srz4 table {
+          line-height: 18px;
+        }
+        .skn-srz4.pagesize {
+          width: 595px;
+        }
+        .skn-srz4.fontface {
+          font-family: Century Gothic;
+        }
+        .skn-srz4.fontsize {
+          font-size: 11px;
+        }
+        .skn-srz4 .section {
+          padding-top: 20px;
+        }
+        .skn-srz4 .right-box .section:after {
+          padding-bottom: 10px;
+        }
+        .skn-srz4 .paragraph {
+          margin-top: 10px;
+        }
+        .skn-srz4 .singlecolumn,
+        .skn-srz4 .maincolumn {
+          word-wrap: break-word;
+        }
+        .skn-srz4 .left-box .singlecolumn,
+        .skn-srz4 .left-box maincolumn {
+          margin-left: 0px;
+        }
+        .skn-srz4 table.skills td {
+          padding-top: 5px;
+        }
+        .skn-srz4 .jobtitle,
+        .skn-srz4 .degree,
+        .skn-srz4 .programline {
+          font-size: 14px;
+        }
+        .skn-srz4 .name {
+          font-size: 36px;
+          line-height: 39px;
+        }
+        .skn-srz4 .topsection {
+          background-color: #373d48;
+        }
+        .skn-srz4 .heading {
+          line-height: 22px;
+        }
+        .skn-srz4 .sectiontitle {
+          font-size: 16px;
+          color: #373d48;
+        }
+        .skn-srz4 .right-box {
+          width: 154px;
+        }
+        .skn-srz4 .left-box .paragraph .singlecolumn {
+          margin-left: 91px;
+        }
+        .skn-srz4 .left-box .paddedline.date-content {
+          left: -91px;
+        }
+        .skn-srz4 .resumeTitle {
+          font-size: 18px;
+        }
+        .skn-srz4 .ratingWrapper .default-fill {
+          fill: #373d48;
+        }
+
+        /*fixes for builder page*/
+        #displayResume .skn-srz4.document {
+          min-height: 792px;
+        }
+        .skn-srz4 .sortable-item .rating-wrapper span {
+          top: 0;
+        }
+        .skn-srz4 .left-box > .sortable-item,
+        .skn-srz4 .right-box > .sortable-item {
+          padding-top: 20px;
+        }
+        html.c-rowloc-in.hide-photo
+          .skn-srz4
+          .right-box
+          .sortable-item.data-PICT
+          + .sortable-item {
+          padding-top: 0px !important;
+        }
+      </style>
+    </div>
+    <div
+      class="document doc-root fontsize fontface vmargins hmargins pagesize skn-srz4 SRZ4 ZTY"
+      data-color=""
+    >
+      <div id="CONTAINER_PARENT_0" class="topsection">
+        <div id="CONTAINER_0">
+          <div
+            data-react-beautiful-dnd-draggable="0"
+            class="sortable-item section-container SortableItem-sibling data-NAME"
+          >
+            <div
+              class="document-tool sec-tool"
+              id="editIcons"
+              style="right: -2px"
+            >
+              <button
+                class="btn btn-icon-tertiary btn-icon-edit"
+                type="button"
+                title="View / Edit"
+              >
+                <i class="icon-edit"></i>
+              </button>
+            </div>
+            <div
+              id="SECTION_NAME22797d40-70dd-4fc8-a1df-a4305d3823f5"
+              class="section notdraggable SECTION_NAME firstsection"
+              data-section-cd="NAME"
+            >
+              <div class="doc-item">
+                <div class="">
+                  <div class="">
                     <div
-                      class="section-loader-new d-none"
-                      id="resumeLoader"
-                    ></div>
-
-                    <div class="" tabindex="">
+                      id="PARAGRAPH_NAME_51cd939f-ad94-2a16-7a34-df349e44b2e0"
+                      class="paragraph PARAGRAPH_NAME firstparagraph"
+                    >
                       <div>
-                        <style type="text/css" id="static">
-                          /*Font support for MAC*/
-                          @font-face {
-                            font-family: "Century Gothic";
-                            font-weight: normal;
-                            font-style: normal;
-                            src: local("Century Gothic"),
-                              url("/blobcontent/zty/fonts/CenturyGothic.ttf")
-                                format("truetype");
-                          }
-                          @font-face {
-                            font-family: "Century Gothic";
-                            font-weight: bold;
-                            font-style: normal;
-                            src: local("Century Gothic Bold"),
-                              url("/blobcontent/zty/fonts/CenturyGothicBold.ttf")
-                                format("truetype");
-                          }
-                          @font-face {
-                            font-family: "Century Gothic";
-                            font-weight: bold;
-                            font-style: italic;
-                            src: local("Century Gothic Bold Italic"),
-                              url("/blobcontent/zty/fonts/CenturyGothicBoldItalic.ttf")
-                                format("truetype");
-                          }
-                          @font-face {
-                            font-family: "Century Gothic";
-                            font-weight: normal;
-                            font-style: italic;
-                            src: local("Century Gothic Italic"),
-                              url("/blobcontent/zty/fonts/CenturyGothicItalic.ttf")
-                                format("truetype");
-                          }
-
-                          html,
-                          body,
-                          div,
-                          span,
-                          applet,
-                          object,
-                          iframe,
-                          h1,
-                          h2,
-                          h3,
-                          h4,
-                          h5,
-                          h6,
-                          p,
-                          blockquote,
-                          pre,
-                          a,
-                          abbr,
-                          acronym,
-                          address,
-                          big,
-                          cite,
-                          code,
-                          del,
-                          dfn,
-                          em,
-                          font,
-                          img,
-                          ins,
-                          kbd,
-                          q,
-                          s,
-                          samp,
-                          small,
-                          strike,
-                          strong,
-                          sub,
-                          sup,
-                          tt,
-                          var,
-                          b,
-                          u,
-                          i,
-                          center,
-                          dl,
-                          dt,
-                          dd,
-                          ol,
-                          ul,
-                          li,
-                          fieldset,
-                          form,
-                          label,
-                          legend,
-                          table,
-                          caption,
-                          tbody,
-                          tfoot,
-                          thead,
-                          tr,
-                          th,
-                          td {
-                            margin: 0;
-                            padding: 0;
-                            border: 0;
-                            outline: 0;
-                            vertical-align: baseline;
-                            background: transparent;
-                          }
-                          body {
-                            text-align: left;
-                            font-feature-settings: "liga" 0;
-                            -moz-font-feature-settings: "liga" off;
-                          }
-                          .skn-srz4 ol,
-                          .skn-srz4 ul {
-                            list-style: none;
-                          }
-                          .skn-srz4 table {
-                            border-collapse: collapse;
-                            border-spacing: 0;
-                            font-size: inherit;
-                            color: inherit;
-                            width: 100%;
-                          }
-
-                          /*START content disc style for LI*/
-                          .skn-srz4 ul,
-                          .skn-srz4 li {
-                            margin: 0;
-                            padding: 0;
-                            list-style-type: disc;
-                          }
-                          .skn-srz4 ul li {
-                            margin: 0 0 0 16px;
-                            padding: 0;
-                          }
-                          @-moz-document url-prefix() {
-                            .skn-srz4 ul li {
-                              margin: 0 0 0 12px;
-                              padding: 0 0 0 3px;
-                            }
-                          }
-                          /*END content disc style for LI*/
-
-                          /*table style*/
-                          .skn-srz4 table.skills,
-                          .skn-srz4 .table_wrapper {
-                            width: 100%;
-                            margin-top: 0;
-                            word-wrap: break-word;
-                          }
-                          .skn-srz4 table.skills th,
-                          .skn-srz4 table.skills td {
-                            width: 20%;
-                            text-align: center;
-                          }
-                          .skn-srz4 table.skills .skillname,
-                          .skn-srz4 table.skills .skillrating {
-                            text-align: left;
-                            width: 35%;
-                          }
-                          .skn-srz4 table.skills .skillrating {
-                            width: 20%;
-                          }
-                          .skn-srz4 table.skills .skillyears,
-                          .skn-srz4 table.skills .skilllast {
-                            width: 19%;
-                          }
-                          .skn-srz4 table.skills .pad1 {
-                            width: 5%;
-                          }
-                          .skn-srz4 .skills .pad2,
-                          .skn-srz4 table.skills .pad3 {
-                            width: 1%;
-                          }
-
-                          /* document */
-                          .skn-srz4 {
-                            box-sizing: border-box;
-                            color: #343434;
-                            font-variant-ligatures: none;
-                            line-height: 16px;
-                            min-height: 792px;
-                            word-wrap: break-word;
-                          }
-                          .skn-srz4 .name {
-                            color: #fff;
-                            font-weight: 700;
-                            position: relative;
-                            text-align: left;
-                            word-wrap: break-word;
-                          }
-                          .skn-srz4 .address .singlecolumn {
-                            margin-left: 0 !important;
-                          }
-                          .skn-srz4 .heading {
-                            border-bottom: 1px solid #d5d6d6;
-                            font-weight: 700;
-                            letter-spacing: 0;
-                            line-height: 15px;
-                            margin-bottom: 10px;
-                            padding: 0 0 3px;
-                          }
-                          .skn-srz4 .sectiontitle {
-                            color: #252932;
-                            word-wrap: break-word;
-                          }
-                          .skn-srz4 .degreeGap {
-                            margin-bottom: 4px;
-                          }
-                          .skn-srz4 .locationGap {
-                            margin-top: 4px;
-                          }
-                          .skn-srz4 .firstparagraph {
-                            margin-top: 0 !important;
-                          }
-                          .skn-srz4 .topsection {
-                            background: #373d48;
-                            padding: 15px 15px 20px;
-                          }
-                          .skn-srz4 .section:empty,
-                          .skn-srz4 .hide-bar .ratingWrapper .noLnht,
-                          .skn-srz4 .hide-bar .field-ratt {
-                            display: none;
-                          }
-                          .skn-srz4 .education .joblocation {
-                            font-style: italic;
-                          }
-                          .skn-srz4 .parentContainer {
-                            border-collapse: collapse;
-                            display: table;
-                            min-height: inherit;
-                            padding-bottom: 20px;
-                            table-layout: fixed;
-                            width: 100%;
-                          }
-                          .skn-srz4 .resumeTitle {
-                            color: #fff;
-                            padding-top: 7px;
-                          }
-
-                          /*left and right css*/
-                          .skn-srz4 .right-box,
-                          .skn-srz4 .left-box {
-                            padding: 15px;
-                          }
-                          .skn-srz4 .right-box {
-                            background-color: #f4f4f4;
-                            box-sizing: content-box;
-                            display: table-cell;
-                            letter-spacing: 0.2px;
-                            vertical-align: top;
-                          }
-                          .skn-srz4 .left-box .paddedline.date-content {
-                            position: absolute;
-                            font-weight: 700;
-                            margin-left: 0;
-                            width: 65px;
-                          }
-                          .skn-srz4 .paragraph .singlecolumn {
-                            position: relative;
-                          }
-                          .skn-srz4
-                            .left-box
-                            .summary
-                            .paragraph
-                            .singlecolumn {
-                            margin-left: 0 !important;
-                          }
-                          .skn-srz4 .left-box {
-                            display: table-cell;
-                            letter-spacing: 0.2px;
-                            vertical-align: top;
-                          }
-                          .skn-srz4 .firstsection,
-                          .skn-srz4 .left-box .section:first-child,
-                          .skn-srz4 .right-box .section:first-child {
-                            padding-top: 0 !important;
-                          }
-
-                          /*common css*/
-                          .skn-srz4 .txtBold {
-                            font-weight: bold;
-                          }
-                          .skn-srz4 .txtItl {
-                            font-style: italic;
-                          }
-                          .skn-srz4 .paddedline {
-                            display: block;
-                          }
-                          .skn-srz4 .mt5 {
-                            margin-top: 5px;
-                          }
-                          .skn-srz4 .word-break {
-                            word-wrap: break-word;
-                          }
-                          .skn-srz4 .ratingWrapper {
-                            text-align: right;
-                            position: relative;
-                          }
-                          .skn-srz4 .ratingWrapper .noLnht {
-                            line-height: 0;
-                          }
-                          .skn-srz4 svg {
-                            height: 13px;
-                          }
-
-                          .skn-srz4 > div:not(.topsection) {
-                            min-height: inherit;
-                          }
-                          /* Issues fix for builder page */
-                          .skn-srz4 .ratingWrapper .default-fill {
-                            fill: #373d48;
-                          }
-
-                          /* Only for firefox */
-                          @-moz-document url-prefix() {
-                            .skn-srz4 .parentContainer {
-                              height: 1px;
-                            }
-                          }
-
-                          /* For dates fix */
-                          .skn-srz4 .left-box .hidedates {
-                            visibility: hidden;
-                            position: static !important;
-                            display: block;
-                            float: left;
-                          }
-                          .skn-srz4 .right-box .hidedates {
-                            display: none;
-                          }
-                          .skn-srz4 .paragraph.datespara:after {
-                            content: "";
-                            display: table;
-                            clear: both;
-                          }
-
-                          /*PICT*/
-                          .skn-srz4 .prflPic,
-                          .skn-srz4 .prflPic > div {
-                            width: 154px;
-                            height: 154px;
-                          }
-                          .skn-srz4 .prflPic img {
-                            min-width: 100%;
-                            max-width: 100%;
-                            min-height: 100%;
-                            max-height: 100%;
-                          }</style
-                        ><style
-                          type="text/css"
-                          id="dynamic"
-                          data-time="Fri Oct 14 2022 00:29:21 GMT-0300 (hora estándar de Argentina)"
-                        >
-                          .skn-srz4,
-                          .skn-srz4 table {
-                            line-height: 18px;
-                          }
-                          .skn-srz4.pagesize {
-                            width: 595px;
-                          }
-                          .skn-srz4.fontface {
-                            font-family: Century Gothic;
-                          }
-                          .skn-srz4.fontsize {
-                            font-size: 11px;
-                          }
-                          .skn-srz4 .section {
-                            padding-top: 20px;
-                          }
-                          .skn-srz4 .right-box .section:after {
-                            padding-bottom: 10px;
-                          }
-                          .skn-srz4 .paragraph {
-                            margin-top: 10px;
-                          }
-                          .skn-srz4 .singlecolumn,
-                          .skn-srz4 .maincolumn {
-                            word-wrap: break-word;
-                          }
-                          .skn-srz4 .left-box .singlecolumn,
-                          .skn-srz4 .left-box maincolumn {
-                            margin-left: 0px;
-                          }
-                          .skn-srz4 table.skills td {
-                            padding-top: 5px;
-                          }
-                          .skn-srz4 .jobtitle,
-                          .skn-srz4 .degree,
-                          .skn-srz4 .programline {
-                            font-size: 14px;
-                          }
-                          .skn-srz4 .name {
-                            font-size: 36px;
-                            line-height: 39px;
-                          }
-                          .skn-srz4 .topsection {
-                            background-color: #373d48;
-                          }
-                          .skn-srz4 .heading {
-                            line-height: 22px;
-                          }
-                          .skn-srz4 .sectiontitle {
-                            font-size: 16px;
-                            color: #373d48;
-                          }
-                          .skn-srz4 .right-box {
-                            width: 154px;
-                          }
-                          .skn-srz4 .left-box .paragraph .singlecolumn {
-                            margin-left: 91px;
-                          }
-                          .skn-srz4 .left-box .paddedline.date-content {
-                            left: -91px;
-                          }
-                          .skn-srz4 .resumeTitle {
-                            font-size: 18px;
-                          }
-                          .skn-srz4 .ratingWrapper .default-fill {
-                            fill: #373d48;
-                          }
-
-                          /*fixes for builder page*/
-                          #displayResume .skn-srz4.document {
-                            min-height: 792px;
-                          }
-                          .skn-srz4 .sortable-item .rating-wrapper span {
-                            top: 0;
-                          }
-                          .skn-srz4 .left-box > .sortable-item,
-                          .skn-srz4 .right-box > .sortable-item {
-                            padding-top: 20px;
-                          }
-                          html.c-rowloc-in.hide-photo
-                            .skn-srz4
-                            .right-box
-                            .sortable-item.data-PICT
-                            + .sortable-item {
-                            padding-top: 0px !important;
-                          }
-                        </style>
+                        <div class="name word-break">
+                          <span id="FIELD_FNAM">Walter</span>
+                          <span class="word-break" id="FIELD_LNAM"
+                            >Lacoste</span
+                          >
+                        </div>
+                        <div class="resumeTitle" id="FIELD_DCTL">
+                          Analista Programador
+                        </div>
                       </div>
                       <div
-                        class="document doc-root fontsize fontface vmargins hmargins pagesize skn-srz4 SRZ4 ZTY"
-                        data-color=""
+                        class="doc-overlay para-overlay"
+                        style="left: -2px; right: -2px"
                       >
-                        <div id="CONTAINER_PARENT_0" class="topsection">
-                          <div id="CONTAINER_0">
-                            <div
-                              data-react-beautiful-dnd-draggable="0"
-                              class="sortable-item section-container SortableItem-sibling data-NAME"
-                            >
-                              <div
-                                class="document-tool sec-tool"
-                                id="editIcons"
-                                style="right: -2px"
-                              >
-                                <button
-                                  class="btn btn-icon-tertiary btn-icon-edit"
-                                  type="button"
-                                  title="View / Edit"
-                                >
-                                  <i class="icon-edit"></i>
-                                </button>
-                              </div>
-                              <div
-                                id="SECTION_NAME22797d40-70dd-4fc8-a1df-a4305d3823f5"
-                                class="section notdraggable SECTION_NAME firstsection"
-                                data-section-cd="NAME"
-                              >
-                                <div class="doc-item">
-                                  <div class="">
-                                    <div class="">
-                                      <div
-                                        id="PARAGRAPH_NAME_51cd939f-ad94-2a16-7a34-df349e44b2e0"
-                                        class="paragraph PARAGRAPH_NAME firstparagraph"
-                                      >
-                                        <div>
-                                          <div class="name word-break">
-                                            <span id="FIELD_FNAM">Walter</span>
-                                            <span
-                                              class="word-break"
-                                              id="FIELD_LNAM"
-                                              >Lacoste</span
-                                            >
-                                          </div>
-                                          <div
-                                            class="resumeTitle"
-                                            id="FIELD_DCTL"
-                                          >
-                                            Analista Programador
-                                          </div>
-                                        </div>
-                                        <div
-                                          class="doc-overlay para-overlay"
-                                          style="left: -2px; right: -2px"
-                                        >
-                                          <span
-                                            class="badge badge-primary badge-edit"
-                                          ></span
-                                          ><span>&nbsp;</span>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div
-                                  class="doc-overlay section-overlay"
-                                  style="left: -2px; right: -2px"
-                                >
-                                  <span>&nbsp;</span>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div id="CONTAINER_PARENT_1" class="parentContainer">
-                          <div id="CONTAINER_1" class="left-box">
-                            <div
-                              data-react-beautiful-dnd-draggable="1"
-                              class="sortable-item section-container SortableItem-sibling data-SUMM"
-                            >
-                              <div
-                                class="document-tool sec-tool"
-                                id="editIcons"
-                                style="right: -2px"
-                              >
-                                <button
-                                  class="btn btn-icon-tertiary btn-icon-edit"
-                                  type="button"
-                                  title="View / Edit"
-                                >
-                                  <i class="icon-edit"></i>
-                                </button>
-                              </div>
-                              <div
-                                id="SECTION_SUMMcc1d766e-f8df-4d38-9dd0-a5aafa2f9efe"
-                                class="section summary notdraggable SECTION_SUMM"
-                                data-section-cd="SUMM"
-                              >
-                                <div class="doc-item">
-                                  <div class="">
-                                    <div class="">
-                                      <div
-                                        id="PARAGRAPH_SUMM_760d7c7b-537e-acd7-da35-bccccdf297e2"
-                                        class="paragraph PARAGRAPH_SUMM firstparagraph"
-                                      >
-                                        <div class="clearfix doc-item">
-                                          <div
-                                            class="singlecolumn"
-                                            id="FIELD_FRFM"
-                                          >
-                                            <p>
-                                              Me encuentro terminando la carrera
-                                              de Licenciatura en Sistemas. Soy
-                                              autodidacta, dedicado y
-                                              emprendedor. Busco aprender algo
-                                              nuevo cada dia, sea leyendo
-                                              libros, articulos o realizando
-                                              cursos. Disfruto resolviendo
-                                              problemas complejos e
-                                              identificando areas de mejora y
-                                              necesidades de usuario. Creo que
-                                              una excelente comunicacion con los
-                                              clientes y el equipo son
-                                              esenciales para el exito de
-                                              cualquier proyecto.
-                                            </p>
-                                          </div>
-                                        </div>
-                                        <div
-                                          class="doc-overlay para-overlay"
-                                          style="left: -2px; right: -2px"
-                                        >
-                                          <span
-                                            class="badge badge-primary badge-edit"
-                                          ></span
-                                          ><span>&nbsp;</span>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div
-                                  class="doc-overlay section-overlay"
-                                  style="left: -2px; right: -2px"
-                                >
-                                  <span>&nbsp;</span>
-                                </div>
-                              </div>
-                            </div>
-                            <div
-                              data-react-beautiful-dnd-draggable="1"
-                              class="sortable-item section-container SortableItem-sibling data-EXPR"
-                            >
-                              <div
-                                class="document-tool sec-tool"
-                                id="editIcons"
-                                style="right: -2px"
-                              >
-                                <button
-                                  class="btn btn-icon-tertiary btn-icon-edit"
-                                  type="button"
-                                  title="View / Edit"
-                                >
-                                  <i class="icon-edit"></i></button
-                                ><button
-                                  class="btn btn-icon-tertiary btn-icon-delete"
-                                  type="button"
-                                  title="Delete"
-                                >
-                                  <i
-                                    class="icon-delete"
-                                    title="Delete"
-                                  ></i></button
-                                ><button
-                                  type="button"
-                                  class="btn-icon-tertiary btn-icon-move"
-                                  style="right: -459.567px"
-                                >
-                                  <i
-                                    class="icon-move"
-                                    tabindex="0"
-                                    data-react-beautiful-dnd-drag-handle="1"
-                                    aria-roledescription="Draggable item. Press space bar to lift"
-                                    draggable="false"
-                                    title="Move"
-                                  ></i>
-                                </button>
-                              </div>
-                              <div
-                                id="SECTION_EXPR1b9be9fd-f0a3-4bb2-afc9-b99ecc6bcee8"
-                                class="section experience SECTION_EXPR multi-para has-title"
-                                data-section-cd="EXPR"
-                              >
-                                <div class="doc-item">
-                                  <div class="heading">
-                                    <div
-                                      class="sectiontitle"
-                                      id="SECTIONNAME_EXPR"
-                                    >
-                                      Experiencia Laboral<span
-                                        title=" Experiencia Laboral "
-                                        class="rename-section text-rename"
-                                        >Rename</span
-                                      >
-                                    </div>
-                                  </div>
-                                  <div class="">
-                                    <div class="">
-                                      <div
-                                        id="PARAGRAPH_EXPR_629ae96a-d288-fe1c-d766-71f7097b1ad3"
-                                        class="paragraph datespara PARAGRAPH_EXPR firstparagraph"
-                                      >
-                                        <div class="clearfix doc-item">
-                                          <div
-                                            class="paddedline date-content hidedates"
-                                            dependency="JSTD|EDDT"
-                                          >
-                                            <span
-                                              class="jobdates"
-                                              dependency="JSTD"
-                                              >2007-03</span
-                                            ><span dependency="JSTD+EDDT">
-                                              - </span
-                                            ><span
-                                              class="jobdates"
-                                              dependency="EDDT"
-                                              >2007-03</span
-                                            ><br
-                                              dependency="JTIT|COMP|JSTA|JCIT"
-                                            />
-                                          </div>
-                                          <div class="singlecolumn">
-                                            <div
-                                              class="paddedline date-content"
-                                              dependency="JSTD|EDDT"
-                                            >
-                                              <span
-                                                class="jobdates"
-                                                id="FIELD_JSTD"
-                                                format="%Y-%m"
-                                                >2019-06</span
-                                              ><span dependency="JSTD+EDDT">
-                                                - </span
-                                              ><span
-                                                class="jobdates"
-                                                id="FIELD_EDDT"
-                                                format="%Y-%m"
-                                                >2021-08</span
-                                              ><br
-                                                dependency="JTIT|COMP|JSTA|JCIT"
-                                              />
-                                            </div>
-                                            <span
-                                              class="paddedline"
-                                              dependency="JTIT"
-                                            >
-                                              <span
-                                                class="jobtitle txtBold"
-                                                id="FIELD_JTIT"
-                                                >Consultor BI</span
-                                              >
-                                            </span>
-                                            <span
-                                              class="paddedline locationGap txtItl"
-                                              dependency="COMP|JSTA|JCIT"
-                                            >
-                                              <span
-                                                class="companyname"
-                                                id="FIELD_COMP"
-                                                >IT Maker</span
-                                              ><span
-                                                class="jobcity"
-                                                id="FIELD_JCIT"
-                                              ></span
-                                              ><span
-                                                class="jobstate"
-                                                id="FIELD_JSTA"
-                                              ></span>
-                                            </span>
-                                            <span
-                                              class="jobline"
-                                              id="FIELD_JDES"
-                                              ><ul>
-                                                <li>
-                                                  Participé en variedad de
-                                                  proyectos con metologias
-                                                  tradicionales como agiles
-                                                </li>
-                                                <li>
-                                                  Desarrollo de dashboards
-                                                  Qlikview y QlikSense
-                                                </li>
-                                                <li>
-                                                  Aprendí a generar una buena
-                                                  comunicación con los clientes
-                                                  y entender sus necesidades
-                                                </li>
-                                                <li>
-                                                  Brindé soporte y mantenimiento
-                                                  a aplicaciones ya existentes
-                                                </li>
-                                                <li>
-                                                  Desarrollo de ETL explotando
-                                                  diferentes fuentes de datos
-                                                </li>
-                                              </ul></span
-                                            >
-                                          </div>
-                                        </div>
-                                        <div
-                                          class="doc-overlay para-overlay"
-                                          style="left: -2px; right: -2px"
-                                        >
-                                          <span
-                                            class="badge badge-primary badge-edit"
-                                          ></span
-                                          ><span>&nbsp;</span>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div
-                                  class="doc-overlay section-overlay"
-                                  style="left: -2px; right: -2px"
-                                >
-                                  <span>&nbsp;</span>
-                                </div>
-                              </div>
-                            </div>
-                            <div
-                              data-react-beautiful-dnd-draggable="1"
-                              class="sortable-item section-container SortableItem-sibling data-ACCM"
-                            >
-                              <div
-                                class="document-tool sec-tool"
-                                id="editIcons"
-                                style="right: -2px"
-                              >
-                                <button
-                                  class="btn btn-icon-tertiary btn-icon-edit"
-                                  type="button"
-                                  title="View / Edit"
-                                >
-                                  <i class="icon-edit"></i></button
-                                ><button
-                                  class="btn btn-icon-tertiary btn-icon-delete"
-                                  type="button"
-                                  title="Delete"
-                                >
-                                  <i
-                                    class="icon-delete"
-                                    title="Delete"
-                                  ></i></button
-                                ><button
-                                  type="button"
-                                  class="btn-icon-tertiary btn-icon-move"
-                                  style="right: -114px"
-                                >
-                                  <i
-                                    class="icon-move"
-                                    tabindex="0"
-                                    data-react-beautiful-dnd-drag-handle="1"
-                                    aria-roledescription="Draggable item. Press space bar to lift"
-                                    draggable="false"
-                                    title="Move"
-                                  ></i>
-                                </button>
-                              </div>
-                              <div
-                                id="SECTION_ACCMe6d9730d-2f75-13c1-b7b2-a7d6af086881"
-                                class="section SECTION_ACCM has-title"
-                                data-section-cd="ACCM"
-                              >
-                                <div class="doc-item">
-                                  <div class="heading">
-                                    <div
-                                      class="sectiontitle"
-                                      id="SECTIONNAME_ACCM"
-                                    >
-                                      Proyectos<span
-                                        title=" Proyectos "
-                                        class="rename-section text-rename"
-                                        >Rename</span
-                                      >
-                                    </div>
-                                  </div>
-                                  <div class="">
-                                    <div class="">
-                                      <div
-                                        id="PARAGRAPH_ACCM_eb535e2c-4d28-4300-0bb4-1ce2dc8c9e5f"
-                                        class="paragraph PARAGRAPH_ACCM firstparagraph"
-                                      >
-                                        <div class="clearfix doc-item">
-                                          <div
-                                            class="singlecolumn"
-                                            id="FIELD_FRFM"
-                                          >
-                                            <p>
-                                              Desarrollo de una aplicacion de
-                                              ventas online con una arquitectura
-                                              de microservicios, utilizando
-                                              Spring y Python.
-                                            </p>
-                                          </div>
-                                        </div>
-                                        <div
-                                          class="doc-overlay para-overlay"
-                                          style="left: -2px; right: -2px"
-                                        >
-                                          <span
-                                            class="badge badge-primary badge-edit"
-                                          ></span
-                                          ><span>&nbsp;</span>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div
-                                  class="doc-overlay section-overlay"
-                                  style="left: -2px; right: -2px"
-                                >
-                                  <span>&nbsp;</span>
-                                </div>
-                              </div>
-                            </div>
-                            <div
-                              data-react-beautiful-dnd-draggable="1"
-                              class="sortable-item section-container SortableItem-sibling data-CERT"
-                            >
-                              <div
-                                class="document-tool sec-tool"
-                                id="editIcons"
-                                style="right: -2px"
-                              >
-                                <button
-                                  class="btn btn-icon-tertiary btn-icon-edit"
-                                  type="button"
-                                  title="View / Edit"
-                                >
-                                  <i class="icon-edit"></i></button
-                                ><button
-                                  class="btn btn-icon-tertiary btn-icon-delete"
-                                  type="button"
-                                  title="Delete"
-                                >
-                                  <i
-                                    class="icon-delete"
-                                    title="Delete"
-                                  ></i></button
-                                ><button
-                                  type="button"
-                                  class="btn-icon-tertiary btn-icon-move"
-                                  style="right: -114px"
-                                >
-                                  <i
-                                    class="icon-move"
-                                    tabindex="0"
-                                    data-react-beautiful-dnd-drag-handle="1"
-                                    aria-roledescription="Draggable item. Press space bar to lift"
-                                    draggable="false"
-                                    title="Move"
-                                  ></i>
-                                </button>
-                              </div>
-                              <div
-                                id="SECTION_CERT8c93e851-ff4b-968c-a649-5f688ff84863"
-                                class="section SECTION_CERT has-title"
-                                data-section-cd="CERT"
-                              >
-                                <div class="doc-item">
-                                  <div class="heading">
-                                    <div
-                                      class="sectiontitle"
-                                      id="SECTIONNAME_CERT"
-                                    >
-                                      Certificados<span
-                                        title=" Certificados "
-                                        class="rename-section text-rename"
-                                        >Rename</span
-                                      >
-                                    </div>
-                                  </div>
-                                  <div class="">
-                                    <div class="">
-                                      <div
-                                        id="PARAGRAPH_CERT_d0979ab5-334d-f99e-9b03-8228b04a90c8"
-                                        class="paragraph datespara PARAGRAPH_CERT firstparagraph"
-                                      >
-                                        <div class="clearfix doc-item">
-                                          <div
-                                            class="paddedline date-content hidedates"
-                                            dependency="DATE"
-                                          >
-                                            <span class="jobdates"
-                                              >2007-03</span
-                                            >
-                                          </div>
-                                          <div class="singlecolumn">
-                                            <div
-                                              class="paddedline date-content"
-                                              dependency="DATE"
-                                            >
-                                              <span
-                                                class="jobdates"
-                                                id="FIELD_DATE"
-                                                format="%Y-%m"
-                                                >2022-08</span
-                                              >
-                                            </div>
-                                            <div id="FIELD_FRFM">
-                                              <p>
-                                                Desarrollo Backend con Python Y
-                                                Django
-                                              </p>
-                                            </div>
-                                          </div>
-                                        </div>
-                                        <div
-                                          class="doc-overlay para-overlay"
-                                          style="left: -2px; right: -2px"
-                                        >
-                                          <span
-                                            class="badge badge-primary badge-edit"
-                                          ></span
-                                          ><span>&nbsp;</span>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div
-                                  class="doc-overlay section-overlay"
-                                  style="left: -2px; right: -2px"
-                                >
-                                  <span>&nbsp;</span>
-                                </div>
-                              </div>
-                            </div>
-                            <div
-                              data-react-beautiful-dnd-draggable="1"
-                              class="sortable-item section-container SortableItem-sibling data-EDUC"
-                            >
-                              <div
-                                class="document-tool sec-tool"
-                                id="editIcons"
-                                style="right: -2px"
-                              >
-                                <button
-                                  class="btn btn-icon-tertiary btn-icon-edit"
-                                  type="button"
-                                  title="View / Edit"
-                                >
-                                  <i class="icon-edit"></i></button
-                                ><button
-                                  class="btn btn-icon-tertiary btn-icon-delete"
-                                  type="button"
-                                  title="Delete"
-                                >
-                                  <i
-                                    class="icon-delete"
-                                    title="Delete"
-                                  ></i></button
-                                ><button
-                                  type="button"
-                                  class="btn-icon-tertiary btn-icon-move"
-                                  style="right: -114px"
-                                >
-                                  <i
-                                    class="icon-move"
-                                    tabindex="0"
-                                    data-react-beautiful-dnd-drag-handle="1"
-                                    aria-roledescription="Draggable item. Press space bar to lift"
-                                    draggable="false"
-                                    title="Move"
-                                  ></i>
-                                </button>
-                              </div>
-                              <div
-                                id="SECTION_EDUCe038cc1f-aa4f-44f5-bedb-affa8b355865"
-                                class="section education SECTION_EDUC multi-para has-title"
-                                data-section-cd="EDUC"
-                              >
-                                <div class="doc-item">
-                                  <div class="heading">
-                                    <div
-                                      class="sectiontitle"
-                                      id="SECTIONNAME_EDUC"
-                                    >
-                                      Educación<span
-                                        title=" Educación "
-                                        class="rename-section text-rename"
-                                        >Rename</span
-                                      >
-                                    </div>
-                                  </div>
-                                  <div class="">
-                                    <div class="sortableInner">
-                                      <div
-                                        id="PARAGRAPH_EDUC_69046a98-0e37-45e5-cbe5-8ac52ca56368"
-                                        class="paragraph datespara PARAGRAPH_EDUC firstparagraph"
-                                      >
-                                        <div class="clearfix doc-item">
-                                          <div
-                                            class="paddedline date-content hidedates"
-                                            dependency="GRST|GRED"
-                                          >
-                                            <span
-                                              class="jobdates"
-                                              dependency="GRST"
-                                              >2007-03</span
-                                            ><span dependency="GRST+GRED">
-                                              - </span
-                                            ><span
-                                              class="jobdates"
-                                              dependency="GRED"
-                                              >2007-03</span
-                                            >
-                                          </div>
-                                          <div class="singlecolumn">
-                                            <div
-                                              class="paddedline date-content"
-                                            >
-                                              <span
-                                                class="jobdates"
-                                                id="FIELD_GRST"
-                                                format="%Y-%m"
-                                                >2017-04</span
-                                              ><span dependency="GRST+GRED">
-                                                - </span
-                                              ><span
-                                                class="jobdates"
-                                                id="FIELD_GRED"
-                                                format="%Y-%m"
-                                                >Current</span
-                                              >
-                                            </div>
-                                            <span
-                                              class="paddedline degreeGap txtBold"
-                                              dependency="DGRE|STUY"
-                                            >
-                                              <span
-                                                class="degree"
-                                                id="FIELD_DGRE"
-                                                >Licenciatura En Sistemas</span
-                                              ><span
-                                                class="programline"
-                                                id="FIELD_STUY"
-                                              ></span>
-                                            </span>
-                                            <div
-                                              class="paddedline txtItl"
-                                              dependency="SCIT|SSTA|SCHO"
-                                            >
-                                              <span
-                                                class="companyname"
-                                                id="FIELD_SCHO"
-                                                >Universidad Nacional De
-                                                Lanús</span
-                                              ><span
-                                                class="joblocation jobcity"
-                                                id="FIELD_SCIT"
-                                              ></span
-                                              ><span
-                                                class="joblocation jobstate"
-                                                id="FIELD_SSTA"
-                                              ></span>
-                                            </div>
-                                            <span id="FIELD_FRFM"
-                                              ><p>
-                                                5to año Promedio 7.85
-                                              </p></span
-                                            >
-                                          </div>
-                                        </div>
-                                        <div
-                                          class="doc-overlay para-overlay"
-                                          style="left: -2px; right: -2px"
-                                        >
-                                          <span
-                                            class="badge badge-primary badge-edit"
-                                          ></span
-                                          ><span>&nbsp;</span>
-                                        </div>
-                                      </div>
-                                      <div
-                                        id="PARAGRAPH_EDUC_07894e0d-d586-406d-cb51-5c1394290e35"
-                                        class="paragraph datespara PARAGRAPH_EDUC"
-                                      >
-                                        <div class="clearfix doc-item">
-                                          <div
-                                            class="paddedline date-content hidedates"
-                                            dependency="GRST|GRED"
-                                          >
-                                            <span
-                                              class="jobdates"
-                                              dependency="GRST"
-                                              >2007-03</span
-                                            ><span dependency="GRST+GRED">
-                                              - </span
-                                            ><span
-                                              class="jobdates"
-                                              dependency="GRED"
-                                              >2007-03</span
-                                            >
-                                          </div>
-                                          <div class="singlecolumn">
-                                            <div
-                                              class="paddedline date-content"
-                                            >
-                                              <span
-                                                class="jobdates"
-                                                id="FIELD_GRST"
-                                                format="%Y-%m"
-                                                >2017-04</span
-                                              ><span dependency="GRST+GRED">
-                                                - </span
-                                              ><span
-                                                class="jobdates"
-                                                id="FIELD_GRED"
-                                                format="%Y-%m"
-                                                >2022-08</span
-                                              >
-                                            </div>
-                                            <span
-                                              class="paddedline degreeGap txtBold"
-                                              dependency="DGRE|STUY"
-                                            >
-                                              <span
-                                                class="degree"
-                                                id="FIELD_DGRE"
-                                                >Analista Programador
-                                                Universitario</span
-                                              ><span
-                                                class="programline"
-                                                id="FIELD_STUY"
-                                              ></span>
-                                            </span>
-                                            <div
-                                              class="paddedline txtItl"
-                                              dependency="SCIT|SSTA|SCHO"
-                                            >
-                                              <span
-                                                class="companyname"
-                                                id="FIELD_SCHO"
-                                                >Universidad Nacional De
-                                                Lanús</span
-                                              ><span
-                                                class="joblocation jobcity"
-                                                id="FIELD_SCIT"
-                                              ></span
-                                              ><span
-                                                class="joblocation jobstate"
-                                                id="FIELD_SSTA"
-                                              ></span>
-                                            </div>
-                                            <span id="FIELD_FRFM"
-                                              ><p>
-                                                Título intermedio de
-                                                Licenciatura en Sistemas
-                                              </p></span
-                                            >
-                                          </div>
-                                        </div>
-                                        <div
-                                          class="doc-overlay para-overlay"
-                                          style="left: -2px; right: -2px"
-                                        >
-                                          <span
-                                            class="badge badge-primary badge-edit"
-                                          ></span
-                                          ><span>&nbsp;</span>
-                                        </div>
-                                      </div>
-                                      <div
-                                        id="PARAGRAPH_EDUC_6de78ee9-f69d-a25d-a28a-c40e5b4f9cf1"
-                                        class="paragraph datespara PARAGRAPH_EDUC"
-                                      >
-                                        <div class="clearfix doc-item">
-                                          <div
-                                            class="paddedline date-content hidedates"
-                                            dependency="GRST|GRED"
-                                          >
-                                            <span
-                                              class="jobdates"
-                                              dependency="GRED"
-                                              >2007-03</span
-                                            >
-                                          </div>
-                                          <div class="singlecolumn">
-                                            <div
-                                              class="paddedline date-content"
-                                            >
-                                              <span
-                                                class="jobdates"
-                                                id="FIELD_GRST"
-                                                format="%Y-%m"
-                                              ></span
-                                              ><span
-                                                class="jobdates"
-                                                id="FIELD_GRED"
-                                                format="%Y-%m"
-                                                >2012-12</span
-                                              >
-                                            </div>
-                                            <span
-                                              class="paddedline degreeGap txtBold"
-                                              dependency="DGRE|STUY"
-                                            >
-                                              <span
-                                                class="degree"
-                                                id="FIELD_DGRE"
-                                                >Bachiller En Ciencias
-                                                Naturales</span
-                                              ><span
-                                                class="programline"
-                                                id="FIELD_STUY"
-                                              ></span>
-                                            </span>
-                                            <div
-                                              class="paddedline txtItl"
-                                              dependency="SCIT|SSTA|SCHO"
-                                            >
-                                              <span
-                                                class="companyname"
-                                                id="FIELD_SCHO"
-                                                >Colegio Alemán De
-                                                Temperley</span
-                                              ><span
-                                                class="joblocation jobcity"
-                                                id="FIELD_SCIT"
-                                              ></span
-                                              ><span
-                                                class="joblocation jobstate"
-                                                id="FIELD_SSTA"
-                                              ></span>
-                                            </div>
-                                            <span id="FIELD_FRFM"></span>
-                                          </div>
-                                        </div>
-                                        <div
-                                          class="doc-overlay para-overlay"
-                                          style="left: -2px; right: -2px"
-                                        >
-                                          <span
-                                            class="badge badge-primary badge-edit"
-                                          ></span
-                                          ><span>&nbsp;</span>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div
-                                  class="doc-overlay section-overlay"
-                                  style="left: -2px; right: -2px"
-                                >
-                                  <span>&nbsp;</span>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div id="CONTAINER_2" class="right-box">
-                            <div
-                              data-react-beautiful-dnd-draggable="1"
-                              class="sortable-item section-container SortableItem-sibling data-CNTC"
-                            >
-                              <div
-                                class="document-tool sec-tool"
-                                id="editIcons"
-                                style="right: -2px"
-                              >
-                                <button
-                                  class="btn btn-icon-tertiary btn-icon-edit"
-                                  type="button"
-                                  title="View / Edit"
-                                >
-                                  <i class="icon-edit"></i>
-                                </button>
-                              </div>
-                              <div
-                                id="SECTION_CNTC35decaa8-7c9a-46b2-a7f8-386cbe6a3fcc"
-                                class="section SECTION_CNTC notdraggable has-title"
-                                data-section-cd="CNTC"
-                              >
-                                <div class="doc-item">
-                                  <div class="heading">
-                                    <div
-                                      class="sectiontitle"
-                                      id="SECTIONNAME_CNTC"
-                                    >
-                                      Contacto<span
-                                        title=" Contacto "
-                                        class="rename-section text-rename"
-                                        >Rename</span
-                                      >
-                                    </div>
-                                  </div>
-                                  <div class="">
-                                    <div class="">
-                                      <div
-                                        id="PARAGRAPH_CNTC_8d7fb53f-23c2-91c9-dc4c-a979339c0e7f"
-                                        class="paragraph PARAGRAPH_CNTC firstparagraph"
-                                      >
-                                        <div class="clearfix doc-item">
-                                          <div class="address">
-                                            <div class="singlecolumn">
-                                              <div
-                                                dependency="STRT|CITY|STAT|ZIPC|ADDR"
-                                              >
-                                                <div class="txtBold">
-                                                  <span
-                                                    class="xslt_static_change"
-                                                    >Dirección
-                                                  </span>
-                                                </div>
-                                                <div id="FIELD_STRT"></div>
-                                                <span id="FIELD_CITY"></span>
-                                                <span id="FIELD_STAT"></span>
-                                                <span id="FIELD_ZIPC"></span>
-                                                <span id="FIELD_ADDR"
-                                                  >Buenos Aires, 1828
-                                                  Argentina</span
-                                                >
-                                              </div>
-                                              <div
-                                                class="txtBold mt5"
-                                                dependency="HPHN|CPHN"
-                                              >
-                                                <span class="xslt_static_change"
-                                                  >Telefono
-                                                </span>
-                                              </div>
-                                              <div dependency="HPHN">
-                                                <span id="FIELD_HPHN"
-                                                  >11 4408 9961</span
-                                                >
-                                              </div>
-
-                                              <div
-                                                class="txtBold mt5"
-                                                dependency="EMAI"
-                                              >
-                                                <span class="xslt_static_change"
-                                                  >E-mail
-                                                </span>
-                                              </div>
-                                              <div
-                                                dependency="EMAI"
-                                                class="word-break"
-                                              >
-                                                <span id="FIELD_EMAI"
-                                                  >wlacoste@outlook.com</span
-                                                >
-                                              </div>
-                                            </div>
-                                            <div dependency="SOCL">
-                                              <div
-                                                id="CATEGORY_SOCIAL_SOCL"
-                                                class="mt5"
-                                              >
-                                                <span
-                                                  id="DOCDATAINFO_SOCL"
-                                                  class="txtBold"
-                                                  >LinkedIn</span
-                                                ><br />
-                                                <span id="FIELD_SOCL"
-                                                  >linkedin.com/in/wlacoste</span
-                                                >
-                                              </div>
-                                              <div
-                                                id="CATEGORY_SOCIAL_SOCL"
-                                                class="mt5"
-                                              >
-                                                <span
-                                                  id="DOCDATAINFO_SOCL"
-                                                  class="txtBold"
-                                                  >GitHub</span
-                                                ><br />
-                                                <span id="FIELD_SOCL"
-                                                  >github.com/wallatt</span
-                                                >
-                                              </div>
-                                            </div>
-                                          </div>
-                                        </div>
-                                        <div
-                                          class="doc-overlay para-overlay"
-                                          style="left: -2px; right: -2px"
-                                        >
-                                          <span
-                                            class="badge badge-primary badge-edit"
-                                          ></span
-                                          ><span>&nbsp;</span>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div
-                                  class="doc-overlay section-overlay"
-                                  style="left: -2px; right: -2px"
-                                >
-                                  <span>&nbsp;</span>
-                                </div>
-                              </div>
-                            </div>
-                            <div
-                              data-react-beautiful-dnd-draggable="1"
-                              class="sortable-item section-container SortableItem-sibling data-HILT"
-                            >
-                              <div
-                                class="document-tool sec-tool"
-                                id="editIcons"
-                                style="right: -2px"
-                              >
-                                <button
-                                  class="btn btn-icon-tertiary btn-icon-edit"
-                                  type="button"
-                                  title="View / Edit"
-                                >
-                                  <i class="icon-edit"></i></button
-                                ><button
-                                  class="btn btn-icon-tertiary btn-icon-delete"
-                                  type="button"
-                                  title="Delete"
-                                >
-                                  <i
-                                    class="icon-delete"
-                                    title="Delete"
-                                  ></i></button
-                                ><button
-                                  type="button"
-                                  class="btn-icon-tertiary btn-icon-move"
-                                  style="right: -234px"
-                                >
-                                  <i
-                                    class="icon-move"
-                                    tabindex="0"
-                                    data-react-beautiful-dnd-drag-handle="1"
-                                    aria-roledescription="Draggable item. Press space bar to lift"
-                                    draggable="false"
-                                    title="Move"
-                                  ></i>
-                                </button>
-                              </div>
-                              <div
-                                id="SECTION_HILTf5ebe44b-b414-47ba-9eba-7b8e55682d3e"
-                                class="section SECTION_HILT has-title"
-                                data-section-cd="HILT"
-                              >
-                                <div class="doc-item">
-                                  <div class="heading">
-                                    <div
-                                      class="sectiontitle"
-                                      id="SECTIONNAME_HILT"
-                                    >
-                                      Conocimientos<span
-                                        title=" Conocimientos "
-                                        class="rename-section text-rename"
-                                        >Rename</span
-                                      >
-                                    </div>
-                                  </div>
-                                  <div class="">
-                                    <div class="sortableInner">
-                                      <div
-                                        id="PARAGRAPH_HILT_42a3d3ba-e440-040b-a2df-a5cad021bad2"
-                                        class="paragraph PARAGRAPH_HILT firstparagraph"
-                                      >
-                                        <div class="clearfix doc-item">
-                                          <div class="singlecolumn maincolumn">
-                                            <span
-                                              class="paddedline"
-                                              id="FIELD_SKC1"
-                                              ><p>Java</p></span
-                                            >
-                                          </div>
-                                        </div>
-                                        <div
-                                          class="doc-overlay para-overlay"
-                                          style="left: -2px; right: -2px"
-                                        >
-                                          <span
-                                            class="badge badge-primary badge-edit"
-                                          ></span
-                                          ><span>&nbsp;</span>
-                                        </div>
-                                      </div>
-                                      <div
-                                        id="PARAGRAPH_HILT_6e7a1b55-4e80-3560-652b-9ef7463bc357"
-                                        class="paragraph PARAGRAPH_HILT"
-                                      >
-                                        <div class="clearfix doc-item">
-                                          <div class="singlecolumn maincolumn">
-                                            <span
-                                              class="paddedline"
-                                              id="FIELD_SKC1"
-                                              ><p>Python</p></span
-                                            >
-                                          </div>
-                                        </div>
-                                        <div
-                                          class="doc-overlay para-overlay"
-                                          style="left: -2px; right: -2px"
-                                        >
-                                          <span
-                                            class="badge badge-primary badge-edit"
-                                          ></span
-                                          ><span>&nbsp;</span>
-                                        </div>
-                                      </div>
-                                      <div
-                                        id="PARAGRAPH_HILT_da397f9f-5d53-ba61-beaa-a87729fe0344"
-                                        class="paragraph PARAGRAPH_HILT"
-                                      >
-                                        <div class="clearfix doc-item">
-                                          <div class="singlecolumn maincolumn">
-                                            <span
-                                              class="paddedline"
-                                              id="FIELD_SKC1"
-                                              ><p>SQL</p></span
-                                            >
-                                          </div>
-                                        </div>
-                                        <div
-                                          class="doc-overlay para-overlay"
-                                          style="left: -2px; right: -2px"
-                                        >
-                                          <span
-                                            class="badge badge-primary badge-edit"
-                                          ></span
-                                          ><span>&nbsp;</span>
-                                        </div>
-                                      </div>
-                                      <div
-                                        id="PARAGRAPH_HILT_89391f77-6ee4-cd0d-193b-03e21f79697e"
-                                        class="paragraph PARAGRAPH_HILT"
-                                      >
-                                        <div class="clearfix doc-item">
-                                          <div class="singlecolumn maincolumn">
-                                            <span
-                                              class="paddedline"
-                                              id="FIELD_SKC1"
-                                              ><p>Git</p></span
-                                            >
-                                          </div>
-                                        </div>
-                                        <div
-                                          class="doc-overlay para-overlay"
-                                          style="left: -2px; right: -2px"
-                                        >
-                                          <span
-                                            class="badge badge-primary badge-edit"
-                                          ></span
-                                          ><span>&nbsp;</span>
-                                        </div>
-                                      </div>
-                                      <div
-                                        id="PARAGRAPH_HILT_3b2d42e6-6a41-5820-cf53-61f8be91ab84"
-                                        class="paragraph PARAGRAPH_HILT"
-                                      >
-                                        <div class="clearfix doc-item">
-                                          <div class="singlecolumn maincolumn">
-                                            <span
-                                              class="paddedline"
-                                              id="FIELD_SKC1"
-                                              ><p>Docker</p></span
-                                            >
-                                          </div>
-                                        </div>
-                                        <div
-                                          class="doc-overlay para-overlay"
-                                          style="left: -2px; right: -2px"
-                                        >
-                                          <span
-                                            class="badge badge-primary badge-edit"
-                                          ></span
-                                          ><span>&nbsp;</span>
-                                        </div>
-                                      </div>
-                                      <div
-                                        id="PARAGRAPH_HILT_e08a8323-ccbe-e896-1c4a-c9f24c156747"
-                                        class="paragraph PARAGRAPH_HILT"
-                                      >
-                                        <div class="clearfix doc-item">
-                                          <div class="singlecolumn maincolumn">
-                                            <span
-                                              class="paddedline"
-                                              id="FIELD_SKC1"
-                                              ><p>Qlik</p></span
-                                            >
-                                          </div>
-                                        </div>
-                                        <div
-                                          class="doc-overlay para-overlay"
-                                          style="left: -2px; right: -2px"
-                                        >
-                                          <span
-                                            class="badge badge-primary badge-edit"
-                                          ></span
-                                          ><span>&nbsp;</span>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div
-                                  class="doc-overlay section-overlay"
-                                  style="left: -2px; right: -2px"
-                                >
-                                  <span>&nbsp;</span>
-                                </div>
-                              </div>
-                            </div>
-                            <div
-                              data-react-beautiful-dnd-draggable="1"
-                              class="sortable-item section-container SortableItem-sibling data-LANG"
-                            >
-                              <div
-                                class="document-tool sec-tool"
-                                id="editIcons"
-                                style="right: -2px"
-                              >
-                                <button
-                                  class="btn btn-icon-tertiary btn-icon-edit"
-                                  type="button"
-                                  title="View / Edit"
-                                >
-                                  <i class="icon-edit"></i></button
-                                ><button
-                                  class="btn btn-icon-tertiary btn-icon-delete"
-                                  type="button"
-                                  title="Delete"
-                                >
-                                  <i
-                                    class="icon-delete"
-                                    title="Delete"
-                                  ></i></button
-                                ><button
-                                  type="button"
-                                  class="btn-icon-tertiary btn-icon-move"
-                                  style="right: -114px"
-                                >
-                                  <i
-                                    class="icon-move"
-                                    tabindex="0"
-                                    data-react-beautiful-dnd-drag-handle="1"
-                                    aria-roledescription="Draggable item. Press space bar to lift"
-                                    draggable="false"
-                                    title="Move"
-                                  ></i>
-                                </button>
-                              </div>
-                              <div
-                                id="SECTION_LANGd2cbffd1-27ba-0a3d-2753-27da705c7d63"
-                                class="section SECTION_LANG has-title"
-                                data-section-cd="LANG"
-                              >
-                                <div class="doc-item">
-                                  <div class="heading">
-                                    <div
-                                      class="sectiontitle"
-                                      id="SECTIONNAME_LANG"
-                                    >
-                                      Lenguajes<span
-                                        title=" Lenguajes "
-                                        class="rename-section text-rename"
-                                        >Rename</span
-                                      >
-                                    </div>
-                                  </div>
-                                  <div class="">
-                                    <div class="sortableInner">
-                                      <div
-                                        id="PARAGRAPH_LANG_0828b231-d01d-5a47-2bc0-1f581743da8d"
-                                        class="paragraph PARAGRAPH_LANG firstparagraph"
-                                      >
-                                        <div class="clearfix doc-item">
-                                          <div
-                                            class="singlecolumn"
-                                            id="FIELD_FRFM"
-                                          >
-                                            <p>Ingles</p>
-                                          </div>
-                                          <div
-                                            class="ratingWrapper"
-                                            dependency="RATV"
-                                          >
-                                            <div class="noLnht">
-                                              <svg
-                                                viewBox="0 0 500 100"
-                                                data-iscl6-viewbox="0 0 600 100"
-                                                id="FIELD_RATV"
-                                                type="count"
-                                              >
-                                                <circle
-                                                  cx="50"
-                                                  cy="50"
-                                                  r="40"
-                                                  fill="#373d48"
-                                                  stroke-width="4"
-                                                  class="default-fill"
-                                                ></circle>
-                                                <circle
-                                                  cx="150"
-                                                  cy="50"
-                                                  r="40"
-                                                  fill="#373d48"
-                                                  stroke-width="4"
-                                                  class="default-fill"
-                                                ></circle>
-                                                <circle
-                                                  cx="250"
-                                                  cy="50"
-                                                  r="40"
-                                                  fill="#373d48"
-                                                  stroke-width="4"
-                                                  class="default-fill"
-                                                ></circle>
-                                                <circle
-                                                  cx="350"
-                                                  cy="50"
-                                                  r="40"
-                                                  fill="#373d48"
-                                                  stroke-width="4"
-                                                  class="default-fill"
-                                                ></circle>
-                                                <circle
-                                                  cx="450"
-                                                  cy="50"
-                                                  r="40"
-                                                  fill="#373d48"
-                                                  stroke-width="4"
-                                                  class="default-fill"
-                                                ></circle>
-                                                <circle
-                                                  cx="550"
-                                                  cy="50"
-                                                  r="40"
-                                                  fill="#d5d6d6"
-                                                  stroke-width="4"
-                                                ></circle>
-                                              </svg>
-                                            </div>
-                                            <span
-                                              class="paddedline field-ratt"
-                                              id="FIELD_RATT"
-                                              >Excellente</span
-                                            >
-                                          </div>
-                                        </div>
-                                        <div
-                                          class="doc-overlay para-overlay"
-                                          style="left: -2px; right: -2px"
-                                        >
-                                          <span
-                                            class="badge badge-primary badge-edit"
-                                          ></span
-                                          ><span>&nbsp;</span>
-                                        </div>
-                                      </div>
-                                      <div
-                                        id="PARAGRAPH_LANG_7acd9a77-f857-ea70-7532-9ff424652fc0"
-                                        class="paragraph PARAGRAPH_LANG"
-                                      >
-                                        <div class="clearfix doc-item">
-                                          <div
-                                            class="singlecolumn"
-                                            id="FIELD_FRFM"
-                                          >
-                                            <p>Alemán</p>
-                                          </div>
-                                          <div
-                                            class="ratingWrapper"
-                                            dependency="RATV"
-                                          >
-                                            <div class="noLnht">
-                                              <svg
-                                                viewBox="0 0 500 100"
-                                                data-iscl6-viewbox="0 0 600 100"
-                                                id="FIELD_RATV"
-                                                type="count"
-                                              >
-                                                <circle
-                                                  cx="50"
-                                                  cy="50"
-                                                  r="40"
-                                                  fill="#373d48"
-                                                  stroke-width="4"
-                                                  class="default-fill"
-                                                ></circle>
-                                                <circle
-                                                  cx="150"
-                                                  cy="50"
-                                                  r="40"
-                                                  fill="#373d48"
-                                                  stroke-width="4"
-                                                  class="default-fill"
-                                                ></circle>
-                                                <circle
-                                                  cx="250"
-                                                  cy="50"
-                                                  r="40"
-                                                  fill="#373d48"
-                                                  stroke-width="4"
-                                                  class="default-fill"
-                                                ></circle>
-                                                <circle
-                                                  cx="350"
-                                                  cy="50"
-                                                  r="40"
-                                                  fill="#d5d6d6"
-                                                  stroke-width="4"
-                                                ></circle>
-                                                <circle
-                                                  cx="450"
-                                                  cy="50"
-                                                  r="40"
-                                                  fill="#d5d6d6"
-                                                  stroke-width="4"
-                                                ></circle>
-                                                <circle
-                                                  cx="550"
-                                                  cy="50"
-                                                  r="40"
-                                                  fill="#d5d6d6"
-                                                  stroke-width="4"
-                                                ></circle>
-                                              </svg>
-                                            </div>
-                                            <span
-                                              class="paddedline field-ratt"
-                                              id="FIELD_RATT"
-                                              >Bueno</span
-                                            >
-                                          </div>
-                                        </div>
-                                        <div
-                                          class="doc-overlay para-overlay"
-                                          style="left: -2px; right: -2px"
-                                        >
-                                          <span
-                                            class="badge badge-primary badge-edit"
-                                          ></span
-                                          ><span>&nbsp;</span>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div
-                                  class="doc-overlay section-overlay"
-                                  style="left: -2px; right: -2px"
-                                >
-                                  <span>&nbsp;</span>
-                                </div>
-                              </div>
-                            </div>
-                            <div
-                              data-react-beautiful-dnd-draggable="1"
-                              class="sortable-item section-container SortableItem-sibling data-CUST"
-                            >
-                              <div
-                                class="document-tool sec-tool"
-                                id="editIcons"
-                                style="right: -2px"
-                              >
-                                <button
-                                  class="btn btn-icon-tertiary btn-icon-edit"
-                                  type="button"
-                                  title="View / Edit"
-                                >
-                                  <i class="icon-edit"></i></button
-                                ><button
-                                  class="btn btn-icon-tertiary btn-icon-delete"
-                                  type="button"
-                                  title="Delete"
-                                >
-                                  <i
-                                    class="icon-delete"
-                                    title="Delete"
-                                  ></i></button
-                                ><button
-                                  type="button"
-                                  class="btn-icon-tertiary btn-icon-move"
-                                  style="right: -114px"
-                                >
-                                  <i
-                                    class="icon-move"
-                                    tabindex="0"
-                                    data-react-beautiful-dnd-drag-handle="1"
-                                    aria-roledescription="Draggable item. Press space bar to lift"
-                                    draggable="false"
-                                    title="Move"
-                                  ></i>
-                                </button>
-                              </div>
-                              <div
-                                id="SECTION_CUST69616423-39de-4f94-371f-b70587edda2a"
-                                class="section SECTION_CUST has-title"
-                                data-section-cd="CUST"
-                              >
-                                <div class="doc-item">
-                                  <div class="heading">
-                                    <div
-                                      class="sectiontitle"
-                                      id="SECTIONNAME_CUST"
-                                    >
-                                      Libros<span
-                                        title=" Libros "
-                                        class="rename-section text-rename"
-                                        >Rename</span
-                                      >
-                                    </div>
-                                  </div>
-                                  <div class="">
-                                    <div class="">
-                                      <div
-                                        id="PARAGRAPH_CUST_8272961d-3e70-a635-790c-68bfdfe2b072"
-                                        class="paragraph PARAGRAPH_CUST firstparagraph"
-                                      >
-                                        <div class="clearfix doc-item">
-                                          <div
-                                            class="singlecolumn"
-                                            id="FIELD_FRFM"
-                                          >
-                                            <ul>
-                                              <li>Clean Architecture</li>
-                                              <li>Clean Code</li>
-                                              <li>
-                                                Head First Design Patterns
-                                              </li>
-                                            </ul>
-                                          </div>
-                                        </div>
-                                        <div
-                                          class="doc-overlay para-overlay"
-                                          style="left: -2px; right: -2px"
-                                        >
-                                          <span
-                                            class="badge badge-primary badge-edit"
-                                          ></span
-                                          ><span>&nbsp;</span>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div
-                                  class="doc-overlay section-overlay"
-                                  style="left: -2px; right: -2px"
-                                >
-                                  <span>&nbsp;</span>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
+                        <span class="badge badge-primary badge-edit"></span
+                        ><span>&nbsp;</span>
                       </div>
                     </div>
                   </div>
                 </div>
-              </section>
+              </div>
+              <div
+                class="doc-overlay section-overlay"
+                style="left: -2px; right: -2px"
+              >
+                <span>&nbsp;</span>
+              </div>
             </div>
-          </section>
-        </main>
-      </section>
-    </form>
+          </div>
+        </div>
+      </div>
+      <div id="CONTAINER_PARENT_1" class="parentContainer">
+        <div id="CONTAINER_1" class="left-box">
+          <div
+            data-react-beautiful-dnd-draggable="1"
+            class="sortable-item section-container SortableItem-sibling data-SUMM"
+          >
+            <div
+              class="document-tool sec-tool"
+              id="editIcons"
+              style="right: -2px"
+            >
+              <button
+                class="btn btn-icon-tertiary btn-icon-edit"
+                type="button"
+                title="View / Edit"
+              >
+                <i class="icon-edit"></i>
+              </button>
+            </div>
+            <div
+              id="SECTION_SUMMcc1d766e-f8df-4d38-9dd0-a5aafa2f9efe"
+              class="section summary notdraggable SECTION_SUMM"
+              data-section-cd="SUMM"
+            >
+              <div class="doc-item">
+                <div class="">
+                  <div class="">
+                    <div
+                      id="PARAGRAPH_SUMM_760d7c7b-537e-acd7-da35-bccccdf297e2"
+                      class="paragraph PARAGRAPH_SUMM firstparagraph"
+                    >
+                      <div class="clearfix doc-item">
+                        <div class="singlecolumn" id="FIELD_FRFM">
+                          <p>
+                            Me encuentro terminando la carrera de Licenciatura
+                            en Sistemas. Soy autodidacta, dedicado y
+                            emprendedor. Busco aprender algo nuevo cada dia, sea
+                            leyendo libros, articulos o realizando cursos.
+                            Disfruto resolviendo problemas complejos e
+                            identificando areas de mejora y necesidades de
+                            usuario. Creo que una excelente comunicacion con los
+                            clientes y el equipo son esenciales para el exito de
+                            cualquier proyecto.
+                          </p>
+                        </div>
+                      </div>
+                      <div
+                        class="doc-overlay para-overlay"
+                        style="left: -2px; right: -2px"
+                      >
+                        <span class="badge badge-primary badge-edit"></span
+                        ><span>&nbsp;</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="doc-overlay section-overlay"
+                style="left: -2px; right: -2px"
+              >
+                <span>&nbsp;</span>
+              </div>
+            </div>
+          </div>
+          <div
+            data-react-beautiful-dnd-draggable="1"
+            class="sortable-item section-container SortableItem-sibling data-EXPR"
+          >
+            <div
+              class="document-tool sec-tool"
+              id="editIcons"
+              style="right: -2px"
+            >
+              <button
+                class="btn btn-icon-tertiary btn-icon-edit"
+                type="button"
+                title="View / Edit"
+              >
+                <i class="icon-edit"></i></button
+              ><button
+                class="btn btn-icon-tertiary btn-icon-delete"
+                type="button"
+                title="Delete"
+              >
+                <i class="icon-delete" title="Delete"></i></button
+              ><button
+                type="button"
+                class="btn-icon-tertiary btn-icon-move"
+                style="right: -459.567px"
+              >
+                <i
+                  class="icon-move"
+                  tabindex="0"
+                  data-react-beautiful-dnd-drag-handle="1"
+                  aria-roledescription="Draggable item. Press space bar to lift"
+                  draggable="false"
+                  title="Move"
+                ></i>
+              </button>
+            </div>
+            <div
+              id="SECTION_EXPR1b9be9fd-f0a3-4bb2-afc9-b99ecc6bcee8"
+              class="section experience SECTION_EXPR multi-para has-title"
+              data-section-cd="EXPR"
+            >
+              <div class="doc-item">
+                <div class="heading">
+                  <div class="sectiontitle" id="SECTIONNAME_EXPR">
+                    Experiencia Laboral<span
+                      title=" Experiencia Laboral "
+                      class="rename-section text-rename"
+                      >Rename</span
+                    >
+                  </div>
+                </div>
+                <div class="">
+                  <div class="">
+                    <div
+                      id="PARAGRAPH_EXPR_629ae96a-d288-fe1c-d766-71f7097b1ad3"
+                      class="paragraph datespara PARAGRAPH_EXPR firstparagraph"
+                    >
+                      <div class="clearfix doc-item">
+                        <div
+                          class="paddedline date-content hidedates"
+                          dependency="JSTD|EDDT"
+                        >
+                          <span class="jobdates" dependency="JSTD">2007-03</span
+                          ><span dependency="JSTD+EDDT"> - </span
+                          ><span class="jobdates" dependency="EDDT"
+                            >2007-03</span
+                          ><br dependency="JTIT|COMP|JSTA|JCIT" />
+                        </div>
+                        <div class="singlecolumn">
+                          <div
+                            class="paddedline date-content"
+                            dependency="JSTD|EDDT"
+                          >
+                            <span
+                              class="jobdates"
+                              id="FIELD_JSTD"
+                              format="%Y-%m"
+                              >2019-06</span
+                            ><span dependency="JSTD+EDDT"> - </span
+                            ><span
+                              class="jobdates"
+                              id="FIELD_EDDT"
+                              format="%Y-%m"
+                              >2021-08</span
+                            ><br dependency="JTIT|COMP|JSTA|JCIT" />
+                          </div>
+                          <span class="paddedline" dependency="JTIT">
+                            <span class="jobtitle txtBold" id="FIELD_JTIT"
+                              >Consultor BI</span
+                            >
+                          </span>
+                          <span
+                            class="paddedline locationGap txtItl"
+                            dependency="COMP|JSTA|JCIT"
+                          >
+                            <span class="companyname" id="FIELD_COMP"
+                              >IT Maker</span
+                            ><span class="jobcity" id="FIELD_JCIT"></span
+                            ><span class="jobstate" id="FIELD_JSTA"></span>
+                          </span>
+                          <span class="jobline" id="FIELD_JDES"
+                            ><ul>
+                              <li>
+                                Participé en variedad de proyectos con
+                                metologias tradicionales como agiles
+                              </li>
+                              <li>
+                                Desarrollo de dashboards Qlikview y QlikSense
+                              </li>
+                              <li>
+                                Aprendí a generar una buena comunicación con los
+                                clientes y entender sus necesidades
+                              </li>
+                              <li>
+                                Brindé soporte y mantenimiento a aplicaciones ya
+                                existentes
+                              </li>
+                              <li>
+                                Desarrollo de ETL explotando diferentes fuentes
+                                de datos
+                              </li>
+                            </ul></span
+                          >
+                        </div>
+                      </div>
+                      <div
+                        class="doc-overlay para-overlay"
+                        style="left: -2px; right: -2px"
+                      >
+                        <span class="badge badge-primary badge-edit"></span
+                        ><span>&nbsp;</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="doc-overlay section-overlay"
+                style="left: -2px; right: -2px"
+              >
+                <span>&nbsp;</span>
+              </div>
+            </div>
+          </div>
+          <div
+            data-react-beautiful-dnd-draggable="1"
+            class="sortable-item section-container SortableItem-sibling data-ACCM"
+          >
+            <div
+              class="document-tool sec-tool"
+              id="editIcons"
+              style="right: -2px"
+            >
+              <button
+                class="btn btn-icon-tertiary btn-icon-edit"
+                type="button"
+                title="View / Edit"
+              >
+                <i class="icon-edit"></i></button
+              ><button
+                class="btn btn-icon-tertiary btn-icon-delete"
+                type="button"
+                title="Delete"
+              >
+                <i class="icon-delete" title="Delete"></i></button
+              ><button
+                type="button"
+                class="btn-icon-tertiary btn-icon-move"
+                style="right: -114px"
+              >
+                <i
+                  class="icon-move"
+                  tabindex="0"
+                  data-react-beautiful-dnd-drag-handle="1"
+                  aria-roledescription="Draggable item. Press space bar to lift"
+                  draggable="false"
+                  title="Move"
+                ></i>
+              </button>
+            </div>
+            <div
+              id="SECTION_ACCMe6d9730d-2f75-13c1-b7b2-a7d6af086881"
+              class="section SECTION_ACCM has-title"
+              data-section-cd="ACCM"
+            >
+              <div class="doc-item">
+                <div class="heading">
+                  <div class="sectiontitle" id="SECTIONNAME_ACCM">
+                    Proyectos<span
+                      title=" Proyectos "
+                      class="rename-section text-rename"
+                      >Rename</span
+                    >
+                  </div>
+                </div>
+                <div class="">
+                  <div class="">
+                    <div
+                      id="PARAGRAPH_ACCM_eb535e2c-4d28-4300-0bb4-1ce2dc8c9e5f"
+                      class="paragraph PARAGRAPH_ACCM firstparagraph"
+                    >
+                      <div class="clearfix doc-item">
+                        <div class="singlecolumn" id="FIELD_FRFM">
+                          <p>
+                            Desarrollo de una aplicacion de ventas online con
+                            una arquitectura de microservicios, utilizando
+                            Spring y Python.
+                          </p>
+                        </div>
+                      </div>
+                      <div
+                        class="doc-overlay para-overlay"
+                        style="left: -2px; right: -2px"
+                      >
+                        <span class="badge badge-primary badge-edit"></span
+                        ><span>&nbsp;</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="doc-overlay section-overlay"
+                style="left: -2px; right: -2px"
+              >
+                <span>&nbsp;</span>
+              </div>
+            </div>
+          </div>
+          <div
+            data-react-beautiful-dnd-draggable="1"
+            class="sortable-item section-container SortableItem-sibling data-CERT"
+          >
+            <div
+              class="document-tool sec-tool"
+              id="editIcons"
+              style="right: -2px"
+            >
+              <button
+                class="btn btn-icon-tertiary btn-icon-edit"
+                type="button"
+                title="View / Edit"
+              >
+                <i class="icon-edit"></i></button
+              ><button
+                class="btn btn-icon-tertiary btn-icon-delete"
+                type="button"
+                title="Delete"
+              >
+                <i class="icon-delete" title="Delete"></i></button
+              ><button
+                type="button"
+                class="btn-icon-tertiary btn-icon-move"
+                style="right: -114px"
+              >
+                <i
+                  class="icon-move"
+                  tabindex="0"
+                  data-react-beautiful-dnd-drag-handle="1"
+                  aria-roledescription="Draggable item. Press space bar to lift"
+                  draggable="false"
+                  title="Move"
+                ></i>
+              </button>
+            </div>
+            <div
+              id="SECTION_CERT8c93e851-ff4b-968c-a649-5f688ff84863"
+              class="section SECTION_CERT has-title"
+              data-section-cd="CERT"
+            >
+              <div class="doc-item">
+                <div class="heading">
+                  <div class="sectiontitle" id="SECTIONNAME_CERT">
+                    Certificados<span
+                      title=" Certificados "
+                      class="rename-section text-rename"
+                      >Rename</span
+                    >
+                  </div>
+                </div>
+                <div class="">
+                  <div class="">
+                    <div
+                      id="PARAGRAPH_CERT_d0979ab5-334d-f99e-9b03-8228b04a90c8"
+                      class="paragraph datespara PARAGRAPH_CERT firstparagraph"
+                    >
+                      <div class="clearfix doc-item">
+                        <div
+                          class="paddedline date-content hidedates"
+                          dependency="DATE"
+                        >
+                          <span class="jobdates">2007-03</span>
+                        </div>
+                        <div class="singlecolumn">
+                          <div
+                            class="paddedline date-content"
+                            dependency="DATE"
+                          >
+                            <span
+                              class="jobdates"
+                              id="FIELD_DATE"
+                              format="%Y-%m"
+                              >2022-08</span
+                            >
+                          </div>
+                          <div id="FIELD_FRFM">
+                            <p>Desarrollo Backend con Python Y Django</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="doc-overlay para-overlay"
+                        style="left: -2px; right: -2px"
+                      >
+                        <span class="badge badge-primary badge-edit"></span
+                        ><span>&nbsp;</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="doc-overlay section-overlay"
+                style="left: -2px; right: -2px"
+              >
+                <span>&nbsp;</span>
+              </div>
+            </div>
+          </div>
+          <div
+            data-react-beautiful-dnd-draggable="1"
+            class="sortable-item section-container SortableItem-sibling data-EDUC"
+          >
+            <div
+              class="document-tool sec-tool"
+              id="editIcons"
+              style="right: -2px"
+            >
+              <button
+                class="btn btn-icon-tertiary btn-icon-edit"
+                type="button"
+                title="View / Edit"
+              >
+                <i class="icon-edit"></i></button
+              ><button
+                class="btn btn-icon-tertiary btn-icon-delete"
+                type="button"
+                title="Delete"
+              >
+                <i class="icon-delete" title="Delete"></i></button
+              ><button
+                type="button"
+                class="btn-icon-tertiary btn-icon-move"
+                style="right: -114px"
+              >
+                <i
+                  class="icon-move"
+                  tabindex="0"
+                  data-react-beautiful-dnd-drag-handle="1"
+                  aria-roledescription="Draggable item. Press space bar to lift"
+                  draggable="false"
+                  title="Move"
+                ></i>
+              </button>
+            </div>
+            <div
+              id="SECTION_EDUCe038cc1f-aa4f-44f5-bedb-affa8b355865"
+              class="section education SECTION_EDUC multi-para has-title"
+              data-section-cd="EDUC"
+            >
+              <div class="doc-item">
+                <div class="heading">
+                  <div class="sectiontitle" id="SECTIONNAME_EDUC">
+                    Educación<span
+                      title=" Educación "
+                      class="rename-section text-rename"
+                      >Rename</span
+                    >
+                  </div>
+                </div>
+                <div class="">
+                  <div class="sortableInner">
+                    <div
+                      id="PARAGRAPH_EDUC_69046a98-0e37-45e5-cbe5-8ac52ca56368"
+                      class="paragraph datespara PARAGRAPH_EDUC firstparagraph"
+                    >
+                      <div class="clearfix doc-item">
+                        <div
+                          class="paddedline date-content hidedates"
+                          dependency="GRST|GRED"
+                        >
+                          <span class="jobdates" dependency="GRST">2007-03</span
+                          ><span dependency="GRST+GRED"> - </span
+                          ><span class="jobdates" dependency="GRED"
+                            >2007-03</span
+                          >
+                        </div>
+                        <div class="singlecolumn">
+                          <div class="paddedline date-content">
+                            <span
+                              class="jobdates"
+                              id="FIELD_GRST"
+                              format="%Y-%m"
+                              >2017-04</span
+                            ><span dependency="GRST+GRED"> - </span
+                            ><span
+                              class="jobdates"
+                              id="FIELD_GRED"
+                              format="%Y-%m"
+                              >Current</span
+                            >
+                          </div>
+                          <span
+                            class="paddedline degreeGap txtBold"
+                            dependency="DGRE|STUY"
+                          >
+                            <span class="degree" id="FIELD_DGRE"
+                              >Licenciatura En Sistemas</span
+                            ><span class="programline" id="FIELD_STUY"></span>
+                          </span>
+                          <div
+                            class="paddedline txtItl"
+                            dependency="SCIT|SSTA|SCHO"
+                          >
+                            <span class="companyname" id="FIELD_SCHO"
+                              >Universidad Nacional De Lanús</span
+                            ><span
+                              class="joblocation jobcity"
+                              id="FIELD_SCIT"
+                            ></span
+                            ><span
+                              class="joblocation jobstate"
+                              id="FIELD_SSTA"
+                            ></span>
+                          </div>
+                          <span id="FIELD_FRFM"
+                            ><p>5to año Promedio 7.85</p></span
+                          >
+                        </div>
+                      </div>
+                      <div
+                        class="doc-overlay para-overlay"
+                        style="left: -2px; right: -2px"
+                      >
+                        <span class="badge badge-primary badge-edit"></span
+                        ><span>&nbsp;</span>
+                      </div>
+                    </div>
+                    <div
+                      id="PARAGRAPH_EDUC_07894e0d-d586-406d-cb51-5c1394290e35"
+                      class="paragraph datespara PARAGRAPH_EDUC"
+                    >
+                      <div class="clearfix doc-item">
+                        <div
+                          class="paddedline date-content hidedates"
+                          dependency="GRST|GRED"
+                        >
+                          <span class="jobdates" dependency="GRST">2007-03</span
+                          ><span dependency="GRST+GRED"> - </span
+                          ><span class="jobdates" dependency="GRED"
+                            >2007-03</span
+                          >
+                        </div>
+                        <div class="singlecolumn">
+                          <div class="paddedline date-content">
+                            <span
+                              class="jobdates"
+                              id="FIELD_GRST"
+                              format="%Y-%m"
+                              >2017-04</span
+                            ><span dependency="GRST+GRED"> - </span
+                            ><span
+                              class="jobdates"
+                              id="FIELD_GRED"
+                              format="%Y-%m"
+                              >2022-08</span
+                            >
+                          </div>
+                          <span
+                            class="paddedline degreeGap txtBold"
+                            dependency="DGRE|STUY"
+                          >
+                            <span class="degree" id="FIELD_DGRE"
+                              >Analista Programador Universitario</span
+                            ><span class="programline" id="FIELD_STUY"></span>
+                          </span>
+                          <div
+                            class="paddedline txtItl"
+                            dependency="SCIT|SSTA|SCHO"
+                          >
+                            <span class="companyname" id="FIELD_SCHO"
+                              >Universidad Nacional De Lanús</span
+                            ><span
+                              class="joblocation jobcity"
+                              id="FIELD_SCIT"
+                            ></span
+                            ><span
+                              class="joblocation jobstate"
+                              id="FIELD_SSTA"
+                            ></span>
+                          </div>
+                          <span id="FIELD_FRFM"
+                            ><p>
+                              Título intermedio de Licenciatura en Sistemas
+                            </p></span
+                          >
+                        </div>
+                      </div>
+                      <div
+                        class="doc-overlay para-overlay"
+                        style="left: -2px; right: -2px"
+                      >
+                        <span class="badge badge-primary badge-edit"></span
+                        ><span>&nbsp;</span>
+                      </div>
+                    </div>
+                    <div
+                      id="PARAGRAPH_EDUC_6de78ee9-f69d-a25d-a28a-c40e5b4f9cf1"
+                      class="paragraph datespara PARAGRAPH_EDUC"
+                    >
+                      <div class="clearfix doc-item">
+                        <div
+                          class="paddedline date-content hidedates"
+                          dependency="GRST|GRED"
+                        >
+                          <span class="jobdates" dependency="GRED"
+                            >2007-03</span
+                          >
+                        </div>
+                        <div class="singlecolumn">
+                          <div class="paddedline date-content">
+                            <span
+                              class="jobdates"
+                              id="FIELD_GRST"
+                              format="%Y-%m"
+                            ></span
+                            ><span
+                              class="jobdates"
+                              id="FIELD_GRED"
+                              format="%Y-%m"
+                              >2012-12</span
+                            >
+                          </div>
+                          <span
+                            class="paddedline degreeGap txtBold"
+                            dependency="DGRE|STUY"
+                          >
+                            <span class="degree" id="FIELD_DGRE"
+                              >Bachiller En Ciencias Naturales</span
+                            ><span class="programline" id="FIELD_STUY"></span>
+                          </span>
+                          <div
+                            class="paddedline txtItl"
+                            dependency="SCIT|SSTA|SCHO"
+                          >
+                            <span class="companyname" id="FIELD_SCHO"
+                              >Colegio Alemán De Temperley</span
+                            ><span
+                              class="joblocation jobcity"
+                              id="FIELD_SCIT"
+                            ></span
+                            ><span
+                              class="joblocation jobstate"
+                              id="FIELD_SSTA"
+                            ></span>
+                          </div>
+                          <span id="FIELD_FRFM"></span>
+                        </div>
+                      </div>
+                      <div
+                        class="doc-overlay para-overlay"
+                        style="left: -2px; right: -2px"
+                      >
+                        <span class="badge badge-primary badge-edit"></span
+                        ><span>&nbsp;</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="doc-overlay section-overlay"
+                style="left: -2px; right: -2px"
+              >
+                <span>&nbsp;</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="CONTAINER_2" class="right-box">
+          <div
+            data-react-beautiful-dnd-draggable="1"
+            class="sortable-item section-container SortableItem-sibling data-CNTC"
+          >
+            <div
+              class="document-tool sec-tool"
+              id="editIcons"
+              style="right: -2px"
+            >
+              <button
+                class="btn btn-icon-tertiary btn-icon-edit"
+                type="button"
+                title="View / Edit"
+              >
+                <i class="icon-edit"></i>
+              </button>
+            </div>
+            <div
+              id="SECTION_CNTC35decaa8-7c9a-46b2-a7f8-386cbe6a3fcc"
+              class="section SECTION_CNTC notdraggable has-title"
+              data-section-cd="CNTC"
+            >
+              <div class="doc-item">
+                <div class="heading">
+                  <div class="sectiontitle" id="SECTIONNAME_CNTC">
+                    Contacto<span
+                      title=" Contacto "
+                      class="rename-section text-rename"
+                      >Rename</span
+                    >
+                  </div>
+                </div>
+                <div class="">
+                  <div class="">
+                    <div
+                      id="PARAGRAPH_CNTC_8d7fb53f-23c2-91c9-dc4c-a979339c0e7f"
+                      class="paragraph PARAGRAPH_CNTC firstparagraph"
+                    >
+                      <div class="clearfix doc-item">
+                        <div class="address">
+                          <div class="singlecolumn">
+                            <div dependency="STRT|CITY|STAT|ZIPC|ADDR">
+                              <div class="txtBold">
+                                <span class="xslt_static_change"
+                                  >Dirección
+                                </span>
+                              </div>
+                              <div id="FIELD_STRT"></div>
+                              <span id="FIELD_CITY"></span>
+                              <span id="FIELD_STAT"></span>
+                              <span id="FIELD_ZIPC"></span>
+                              <span id="FIELD_ADDR"
+                                >Buenos Aires, 1828 Argentina</span
+                              >
+                            </div>
+                            <div class="txtBold mt5" dependency="HPHN|CPHN">
+                              <span class="xslt_static_change">Telefono </span>
+                            </div>
+                            <div dependency="HPHN">
+                              <span id="FIELD_HPHN">11 4408 9961</span>
+                            </div>
+
+                            <div class="txtBold mt5" dependency="EMAI">
+                              <span class="xslt_static_change">E-mail </span>
+                            </div>
+                            <div dependency="EMAI" class="word-break">
+                              <span id="FIELD_EMAI">wlacoste@outlook.com</span>
+                            </div>
+                          </div>
+                          <div dependency="SOCL">
+                            <div id="CATEGORY_SOCIAL_SOCL" class="mt5">
+                              <span id="DOCDATAINFO_SOCL" class="txtBold"
+                                >LinkedIn</span
+                              ><br />
+                              <span id="FIELD_SOCL"
+                                >linkedin.com/in/wlacoste</span
+                              >
+                            </div>
+                            <div id="CATEGORY_SOCIAL_SOCL" class="mt5">
+                              <span id="DOCDATAINFO_SOCL" class="txtBold"
+                                >GitHub</span
+                              ><br />
+                              <span id="FIELD_SOCL">github.com/wallatt</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="doc-overlay para-overlay"
+                        style="left: -2px; right: -2px"
+                      >
+                        <span class="badge badge-primary badge-edit"></span
+                        ><span>&nbsp;</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="doc-overlay section-overlay"
+                style="left: -2px; right: -2px"
+              >
+                <span>&nbsp;</span>
+              </div>
+            </div>
+          </div>
+          <div
+            data-react-beautiful-dnd-draggable="1"
+            class="sortable-item section-container SortableItem-sibling data-HILT"
+          >
+            <div
+              class="document-tool sec-tool"
+              id="editIcons"
+              style="right: -2px"
+            >
+              <button
+                class="btn btn-icon-tertiary btn-icon-edit"
+                type="button"
+                title="View / Edit"
+              >
+                <i class="icon-edit"></i></button
+              ><button
+                class="btn btn-icon-tertiary btn-icon-delete"
+                type="button"
+                title="Delete"
+              >
+                <i class="icon-delete" title="Delete"></i></button
+              ><button
+                type="button"
+                class="btn-icon-tertiary btn-icon-move"
+                style="right: -234px"
+              >
+                <i
+                  class="icon-move"
+                  tabindex="0"
+                  data-react-beautiful-dnd-drag-handle="1"
+                  aria-roledescription="Draggable item. Press space bar to lift"
+                  draggable="false"
+                  title="Move"
+                ></i>
+              </button>
+            </div>
+            <div
+              id="SECTION_HILTf5ebe44b-b414-47ba-9eba-7b8e55682d3e"
+              class="section SECTION_HILT has-title"
+              data-section-cd="HILT"
+            >
+              <div class="doc-item">
+                <div class="heading">
+                  <div class="sectiontitle" id="SECTIONNAME_HILT">
+                    Conocimientos<span
+                      title=" Conocimientos "
+                      class="rename-section text-rename"
+                      >Rename</span
+                    >
+                  </div>
+                </div>
+                <div class="">
+                  <div class="sortableInner">
+                    <div
+                      id="PARAGRAPH_HILT_42a3d3ba-e440-040b-a2df-a5cad021bad2"
+                      class="paragraph PARAGRAPH_HILT firstparagraph"
+                    >
+                      <div class="clearfix doc-item">
+                        <div class="singlecolumn maincolumn">
+                          <span class="paddedline" id="FIELD_SKC1"
+                            ><p>Java</p></span
+                          >
+                        </div>
+                      </div>
+                      <div
+                        class="doc-overlay para-overlay"
+                        style="left: -2px; right: -2px"
+                      >
+                        <span class="badge badge-primary badge-edit"></span
+                        ><span>&nbsp;</span>
+                      </div>
+                    </div>
+                    <div
+                      id="PARAGRAPH_HILT_6e7a1b55-4e80-3560-652b-9ef7463bc357"
+                      class="paragraph PARAGRAPH_HILT"
+                    >
+                      <div class="clearfix doc-item">
+                        <div class="singlecolumn maincolumn">
+                          <span class="paddedline" id="FIELD_SKC1"
+                            ><p>Python</p></span
+                          >
+                        </div>
+                      </div>
+                      <div
+                        class="doc-overlay para-overlay"
+                        style="left: -2px; right: -2px"
+                      >
+                        <span class="badge badge-primary badge-edit"></span
+                        ><span>&nbsp;</span>
+                      </div>
+                    </div>
+                    <div
+                      id="PARAGRAPH_HILT_da397f9f-5d53-ba61-beaa-a87729fe0344"
+                      class="paragraph PARAGRAPH_HILT"
+                    >
+                      <div class="clearfix doc-item">
+                        <div class="singlecolumn maincolumn">
+                          <span class="paddedline" id="FIELD_SKC1"
+                            ><p>SQL</p></span
+                          >
+                        </div>
+                      </div>
+                      <div
+                        class="doc-overlay para-overlay"
+                        style="left: -2px; right: -2px"
+                      >
+                        <span class="badge badge-primary badge-edit"></span
+                        ><span>&nbsp;</span>
+                      </div>
+                    </div>
+                    <div
+                      id="PARAGRAPH_HILT_89391f77-6ee4-cd0d-193b-03e21f79697e"
+                      class="paragraph PARAGRAPH_HILT"
+                    >
+                      <div class="clearfix doc-item">
+                        <div class="singlecolumn maincolumn">
+                          <span class="paddedline" id="FIELD_SKC1"
+                            ><p>Git</p></span
+                          >
+                        </div>
+                      </div>
+                      <div
+                        class="doc-overlay para-overlay"
+                        style="left: -2px; right: -2px"
+                      >
+                        <span class="badge badge-primary badge-edit"></span
+                        ><span>&nbsp;</span>
+                      </div>
+                    </div>
+                    <div
+                      id="PARAGRAPH_HILT_3b2d42e6-6a41-5820-cf53-61f8be91ab84"
+                      class="paragraph PARAGRAPH_HILT"
+                    >
+                      <div class="clearfix doc-item">
+                        <div class="singlecolumn maincolumn">
+                          <span class="paddedline" id="FIELD_SKC1"
+                            ><p>Docker</p></span
+                          >
+                        </div>
+                      </div>
+                      <div
+                        class="doc-overlay para-overlay"
+                        style="left: -2px; right: -2px"
+                      >
+                        <span class="badge badge-primary badge-edit"></span
+                        ><span>&nbsp;</span>
+                      </div>
+                    </div>
+                    <div
+                      id="PARAGRAPH_HILT_e08a8323-ccbe-e896-1c4a-c9f24c156747"
+                      class="paragraph PARAGRAPH_HILT"
+                    >
+                      <div class="clearfix doc-item">
+                        <div class="singlecolumn maincolumn">
+                          <span class="paddedline" id="FIELD_SKC1"
+                            ><p>Qlik</p></span
+                          >
+                        </div>
+                      </div>
+                      <div
+                        class="doc-overlay para-overlay"
+                        style="left: -2px; right: -2px"
+                      >
+                        <span class="badge badge-primary badge-edit"></span
+                        ><span>&nbsp;</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="doc-overlay section-overlay"
+                style="left: -2px; right: -2px"
+              >
+                <span>&nbsp;</span>
+              </div>
+            </div>
+          </div>
+          <div
+            data-react-beautiful-dnd-draggable="1"
+            class="sortable-item section-container SortableItem-sibling data-LANG"
+          >
+            <div
+              class="document-tool sec-tool"
+              id="editIcons"
+              style="right: -2px"
+            >
+              <button
+                class="btn btn-icon-tertiary btn-icon-edit"
+                type="button"
+                title="View / Edit"
+              >
+                <i class="icon-edit"></i></button
+              ><button
+                class="btn btn-icon-tertiary btn-icon-delete"
+                type="button"
+                title="Delete"
+              >
+                <i class="icon-delete" title="Delete"></i></button
+              ><button
+                type="button"
+                class="btn-icon-tertiary btn-icon-move"
+                style="right: -114px"
+              >
+                <i
+                  class="icon-move"
+                  tabindex="0"
+                  data-react-beautiful-dnd-drag-handle="1"
+                  aria-roledescription="Draggable item. Press space bar to lift"
+                  draggable="false"
+                  title="Move"
+                ></i>
+              </button>
+            </div>
+            <div
+              id="SECTION_LANGd2cbffd1-27ba-0a3d-2753-27da705c7d63"
+              class="section SECTION_LANG has-title"
+              data-section-cd="LANG"
+            >
+              <div class="doc-item">
+                <div class="heading">
+                  <div class="sectiontitle" id="SECTIONNAME_LANG">
+                    Lenguajes<span
+                      title=" Lenguajes "
+                      class="rename-section text-rename"
+                      >Rename</span
+                    >
+                  </div>
+                </div>
+                <div class="">
+                  <div class="sortableInner">
+                    <div
+                      id="PARAGRAPH_LANG_0828b231-d01d-5a47-2bc0-1f581743da8d"
+                      class="paragraph PARAGRAPH_LANG firstparagraph"
+                    >
+                      <div class="clearfix doc-item">
+                        <div class="singlecolumn" id="FIELD_FRFM">
+                          <p>Ingles</p>
+                        </div>
+                        <div class="ratingWrapper" dependency="RATV">
+                          <div class="noLnht">
+                            <svg
+                              viewBox="0 0 500 100"
+                              data-iscl6-viewbox="0 0 600 100"
+                              id="FIELD_RATV"
+                              type="count"
+                            >
+                              <circle
+                                cx="50"
+                                cy="50"
+                                r="40"
+                                fill="#373d48"
+                                stroke-width="4"
+                                class="default-fill"
+                              ></circle>
+                              <circle
+                                cx="150"
+                                cy="50"
+                                r="40"
+                                fill="#373d48"
+                                stroke-width="4"
+                                class="default-fill"
+                              ></circle>
+                              <circle
+                                cx="250"
+                                cy="50"
+                                r="40"
+                                fill="#373d48"
+                                stroke-width="4"
+                                class="default-fill"
+                              ></circle>
+                              <circle
+                                cx="350"
+                                cy="50"
+                                r="40"
+                                fill="#373d48"
+                                stroke-width="4"
+                                class="default-fill"
+                              ></circle>
+                              <circle
+                                cx="450"
+                                cy="50"
+                                r="40"
+                                fill="#373d48"
+                                stroke-width="4"
+                                class="default-fill"
+                              ></circle>
+                              <circle
+                                cx="550"
+                                cy="50"
+                                r="40"
+                                fill="#d5d6d6"
+                                stroke-width="4"
+                              ></circle>
+                            </svg>
+                          </div>
+                          <span class="paddedline field-ratt" id="FIELD_RATT"
+                            >Excellente</span
+                          >
+                        </div>
+                      </div>
+                      <div
+                        class="doc-overlay para-overlay"
+                        style="left: -2px; right: -2px"
+                      >
+                        <span class="badge badge-primary badge-edit"></span
+                        ><span>&nbsp;</span>
+                      </div>
+                    </div>
+                    <div
+                      id="PARAGRAPH_LANG_7acd9a77-f857-ea70-7532-9ff424652fc0"
+                      class="paragraph PARAGRAPH_LANG"
+                    >
+                      <div class="clearfix doc-item">
+                        <div class="singlecolumn" id="FIELD_FRFM">
+                          <p>Alemán</p>
+                        </div>
+                        <div class="ratingWrapper" dependency="RATV">
+                          <div class="noLnht">
+                            <svg
+                              viewBox="0 0 500 100"
+                              data-iscl6-viewbox="0 0 600 100"
+                              id="FIELD_RATV"
+                              type="count"
+                            >
+                              <circle
+                                cx="50"
+                                cy="50"
+                                r="40"
+                                fill="#373d48"
+                                stroke-width="4"
+                                class="default-fill"
+                              ></circle>
+                              <circle
+                                cx="150"
+                                cy="50"
+                                r="40"
+                                fill="#373d48"
+                                stroke-width="4"
+                                class="default-fill"
+                              ></circle>
+                              <circle
+                                cx="250"
+                                cy="50"
+                                r="40"
+                                fill="#373d48"
+                                stroke-width="4"
+                                class="default-fill"
+                              ></circle>
+                              <circle
+                                cx="350"
+                                cy="50"
+                                r="40"
+                                fill="#d5d6d6"
+                                stroke-width="4"
+                              ></circle>
+                              <circle
+                                cx="450"
+                                cy="50"
+                                r="40"
+                                fill="#d5d6d6"
+                                stroke-width="4"
+                              ></circle>
+                              <circle
+                                cx="550"
+                                cy="50"
+                                r="40"
+                                fill="#d5d6d6"
+                                stroke-width="4"
+                              ></circle>
+                            </svg>
+                          </div>
+                          <span class="paddedline field-ratt" id="FIELD_RATT"
+                            >Bueno</span
+                          >
+                        </div>
+                      </div>
+                      <div
+                        class="doc-overlay para-overlay"
+                        style="left: -2px; right: -2px"
+                      >
+                        <span class="badge badge-primary badge-edit"></span
+                        ><span>&nbsp;</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="doc-overlay section-overlay"
+                style="left: -2px; right: -2px"
+              >
+                <span>&nbsp;</span>
+              </div>
+            </div>
+          </div>
+          <div
+            data-react-beautiful-dnd-draggable="1"
+            class="sortable-item section-container SortableItem-sibling data-CUST"
+          >
+            <div
+              class="document-tool sec-tool"
+              id="editIcons"
+              style="right: -2px"
+            >
+              <button
+                class="btn btn-icon-tertiary btn-icon-edit"
+                type="button"
+                title="View / Edit"
+              >
+                <i class="icon-edit"></i></button
+              ><button
+                class="btn btn-icon-tertiary btn-icon-delete"
+                type="button"
+                title="Delete"
+              >
+                <i class="icon-delete" title="Delete"></i></button
+              ><button
+                type="button"
+                class="btn-icon-tertiary btn-icon-move"
+                style="right: -114px"
+              >
+                <i
+                  class="icon-move"
+                  tabindex="0"
+                  data-react-beautiful-dnd-drag-handle="1"
+                  aria-roledescription="Draggable item. Press space bar to lift"
+                  draggable="false"
+                  title="Move"
+                ></i>
+              </button>
+            </div>
+            <div
+              id="SECTION_CUST69616423-39de-4f94-371f-b70587edda2a"
+              class="section SECTION_CUST has-title"
+              data-section-cd="CUST"
+            >
+              <div class="doc-item">
+                <div class="heading">
+                  <div class="sectiontitle" id="SECTIONNAME_CUST">
+                    Libros<span
+                      title=" Libros "
+                      class="rename-section text-rename"
+                      >Rename</span
+                    >
+                  </div>
+                </div>
+                <div class="">
+                  <div class="">
+                    <div
+                      id="PARAGRAPH_CUST_8272961d-3e70-a635-790c-68bfdfe2b072"
+                      class="paragraph PARAGRAPH_CUST firstparagraph"
+                    >
+                      <div class="clearfix doc-item">
+                        <div class="singlecolumn" id="FIELD_FRFM">
+                          <ul>
+                            <li>Clean Architecture</li>
+                            <li>Clean Code</li>
+                            <li>Head First Design Patterns</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div
+                        class="doc-overlay para-overlay"
+                        style="left: -2px; right: -2px"
+                      >
+                        <span class="badge badge-primary badge-edit"></span
+                        ><span>&nbsp;</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="doc-overlay section-overlay"
+                style="left: -2px; right: -2px"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
